@@ -218,6 +218,5 @@ void road()
             glEnd();
         }
     }
-
     glFlush(); // Render now
 }
