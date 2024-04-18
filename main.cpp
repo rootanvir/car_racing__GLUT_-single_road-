@@ -4,6 +4,7 @@
 #include "tree.h"
 #include "lake.h"
 #include "building.h"
+#include "lampost.h"
 using namespace std;
 /* Handler for window-repaint event. Call back when the window first appears and
 whenever the window needs to be re-painted. */
@@ -34,6 +35,20 @@ void display()
     building(0.88f, -0.25f);
     building(0.99f, -0.61f);
     building(0.87f, -1.00f);
+    lamp(-0.70f, -0.99f);
+    lamp(-0.70f, -0.69f);
+    lamp(-0.70f, -0.39f);
+    lamp(-0.70f, -0.10f);
+    lamp(-0.70f, 0.18f);
+    lamp(-0.70f, 0.47f);
+    lamp(-0.70f, 0.75f);
+    lampRev(0.70f, -0.99f);
+    lampRev(0.70f, -0.69f);
+    lampRev(0.70f, -0.40f);
+    lampRev(0.70f, -0.10f);
+    lampRev(0.70f, 0.19f);
+    lampRev(0.70f, 0.49f);
+    lampRev(0.70f, 0.77f);
 
     glFlush();
 }
