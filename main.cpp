@@ -1,6 +1,8 @@
 #include <windows.h> // for MS Windows
 #include <GL/glut.h> // GLUT, include glu.h and gl.h
 #include "road.h"
+#include "tree.h"
+#include "lake.h"
 using namespace std;
 /* Handler for window-repaint event. Call back when the window first appears and
 whenever the window needs to be re-painted. */
@@ -17,6 +19,8 @@ void display() {
     glClearColor(0.156f,0.61f,0.337f, 0.0f); // Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
     road();
+    lake();
+    tree(1.0f);
     glFlush();
 }
 
