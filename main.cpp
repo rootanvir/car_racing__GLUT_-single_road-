@@ -20,7 +20,14 @@ void display() {
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
     road();
     lake();
-    tree(1.0f);
+    pineTree(-0.8f, -0.8f);
+    pineTree(-0.95f, -0.97f);
+
+    pineTree(-0.97f, -0.29f);
+    pineTree(0.91f, 0.86f);
+    pineTree(0.83f, 0.57f);
+    pineTree(0.95f, 0.25f);
+
     glFlush();
 }
 

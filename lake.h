@@ -28,7 +28,8 @@ void lake()
     glVertex2f(1.00f, 0.30f);
     glEnd();
 
-        glColor3f(0.0f,0.0f, 0.0f);
+    glLineWidth(5.0f);
+    glColor3f(0.0f,0.0f, 0.0f);
     glBegin(GL_LINE_STRIP);
     glVertex2f(1.00f, 0.88f);
     glVertex2f(0.93f, 0.84f);
@@ -38,6 +39,17 @@ void lake()
     glVertex2f(0.89f, 0.36f);
     glVertex2f(0.95f, 0.33f);
     glVertex2f(1.00f, 0.30f);
+    glEnd();
+
+
+    glColor3f(0.0f,0.0f, 0.0f);
+    glBegin(GL_LINE_STRIP);
+    glVertex2f(-1.00f, -0.91f);
+    glVertex2f(-0.92f, -0.89f);
+    glVertex2f(-0.85f, -0.75f);
+    glVertex2f(-0.84f, -0.55f);
+    glVertex2f(-0.89f, -0.36f);
+    glVertex2f(-1.00f, -0.32f);
     glEnd();
 
 }
