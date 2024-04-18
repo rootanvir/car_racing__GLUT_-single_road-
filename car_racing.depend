@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1713426873 source:d:\computer_graphics_project\car_racing\main.cpp
+1713430536 source:d:\computer_graphics_project\car_racing\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	"road.h"
 	"tree.h"
 	"lake.h"
+	"building.h"
 
 1301111162 c:\program files (x86)\codeblocks\mingw\include\windows.h
 	<winresrc.h>
@@ -239,6 +240,10 @@
 	<GL/glut.h>
 
 1713425827 d:\computer_graphics_project\car_racing\lake.h
+	<windows.h>
+	<GL/glut.h>
+
+1713433362 d:\computer_graphics_project\car_racing\building.h
 	<windows.h>
 	<GL/glut.h>
 
