@@ -5,6 +5,8 @@
 #include "lake.h"
 #include "building.h"
 #include "lampost.h"
+#include "car.h"
+
 using namespace std;
 /* Handler for window-repaint event. Call back when the window first appears and
 whenever the window needs to be re-painted. */
@@ -49,6 +51,11 @@ void display()
     lampRev(0.70f, 0.19f);
     lampRev(0.70f, 0.49f);
     lampRev(0.70f, 0.77f);
+    car(0.0f,0.0f,0.173, 0.043, 0.671,'1');
+    car(0.5f,0.0f,1, 0, 0,'2');
+    car(1.0f,0.0,0.024, 0.722, 0.114,'3');
+
+
 
     glFlush();
 }

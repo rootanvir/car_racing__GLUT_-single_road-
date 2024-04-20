@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713446732 source:d:\computer_graphics_project\car_racing\main.cpp
+1713627547 source:d:\computer_graphics_project\car_racing\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	"road.h"
@@ -7,6 +7,7 @@
 	"lake.h"
 	"building.h"
 	"lampost.h"
+	"car.h"
 
 1301111162 c:\program files (x86)\codeblocks\mingw\include\windows.h
 	<winresrc.h>
@@ -248,7 +249,11 @@
 	<windows.h>
 	<GL/glut.h>
 
-1713447181 d:\computer_graphics_project\car_racing\lampost.h
+1713447670 d:\computer_graphics_project\car_racing\lampost.h
+	<windows.h>
+	<GL/glut.h>
+
+1713628186 d:\computer_graphics_project\car_racing\car.h
 	<windows.h>
 	<GL/glut.h>
 
