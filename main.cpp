@@ -6,56 +6,22 @@
 #include "building.h"
 #include "lampost.h"
 #include "car.h"
+#include "animation.h"
+#include "merging.h"
+#include "text.h"
+
 
 using namespace std;
-/* Handler for window-repaint event. Call back when the window first appears and
-whenever the window needs to be re-painted. */
-void renderBitmapString(float x, float y, float z, void *font, char *string)
-{
-    char *c;
-    glRasterPos3f(x, y,z);
-    for (c=string; *c != '\0'; c++)
-    {
-        glutBitmapCharacter(font, *c);
-    }
-}
+
+
 
 void display()
 {
     glClearColor(0.156f,0.61f,0.337f, 0.0f); // Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
-    road();
-    lake();
-    building(-0.86f, 0.27f);
-    building(-0.94f, -0.13f);
-    pineTree(-0.8f, -0.8f);
-    pineTree(-0.95f, -0.97f);
-    pineTree(-0.97f, -0.29f);
-    pineTree(0.91f, 0.86f);
-    pineTree(0.83f, 0.57f);
-    pineTree(0.95f, 0.25f);
-    building(0.88f, -0.25f);
-    building(0.99f, -0.61f);
-    building(0.87f, -1.00f);
-    lamp(-0.70f, -0.99f);
-    lamp(-0.70f, -0.69f);
-    lamp(-0.70f, -0.39f);
-    lamp(-0.70f, -0.10f);
-    lamp(-0.70f, 0.18f);
-    lamp(-0.70f, 0.47f);
-    lamp(-0.70f, 0.75f);
-    lampRev(0.70f, -0.99f);
-    lampRev(0.70f, -0.69f);
-    lampRev(0.70f, -0.40f);
-    lampRev(0.70f, -0.10f);
-    lampRev(0.70f, 0.19f);
-    lampRev(0.70f, 0.49f);
-    lampRev(0.70f, 0.77f);
-    car(0.0f,0.0f,0.173, 0.043, 0.671,'1');
-    car(0.5f,0.0f,1, 0, 0,'2');
-    car(1.0f,0.0,0.024, 0.722, 0.114,'3');
-
-
+    roadSurface();
+    scenarioAnimation();
+    carShaking();
 
     glFlush();
 }
@@ -68,6 +34,9 @@ int main(int argc, char** argv)
     glutInitWindowPosition(80, 50);  // Set the window's initial position according to the monitor
     glutCreateWindow("Car Racing"); // Create a window with the given title
     glutDisplayFunc(display); // Register display callback handler for window re-paint
+    glutTimerFunc(100, update, 0);
+    glutTimerFunc(100, update2, 0);
+    glutTimerFunc(100, carUpdate, 0);
     glutMainLoop(); // Enter the event-processing loop
     return 0;
 }

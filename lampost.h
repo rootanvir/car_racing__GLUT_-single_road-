@@ -42,3 +42,14 @@ void lampRev(double centerx,double centery)
     glEnd();
 
 }
+void lamps()
+{
+    for(double i=2.0f;i>-3.0f;i-=0.33f)
+    {
+        lamp(-0.70f,i);
+    }
+    for(double i=2.0f;i>-3.0f;i-=0.33f)
+    {
+        lampRev(0.70f,i);
+    }
+}

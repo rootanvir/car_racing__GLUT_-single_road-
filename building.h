@@ -85,6 +85,9 @@ void building(double centerx,double centery)
         }
     }
 
+}
 
+void buildings()
+{
 
 }

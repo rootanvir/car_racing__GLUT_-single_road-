@@ -42,8 +42,10 @@
 			<Add library="gdi32" />
 			<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/lib" />
 		</Linker>
+		<Unit filename="animation.h" />
 		<Unit filename="lampost.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="merging.h" />
 		<Unit filename="road.h" />
 		<Extensions>
 			<code_completion />

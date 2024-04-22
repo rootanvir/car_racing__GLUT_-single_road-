@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713627547 source:d:\computer_graphics_project\car_racing\main.cpp
+1713729399 source:d:\computer_graphics_project\car_racing\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	"road.h"
@@ -8,6 +8,9 @@
 	"building.h"
 	"lampost.h"
 	"car.h"
+	"animation.h"
+	"merging.h"
+	"text.h"
 
 1301111162 c:\program files (x86)\codeblocks\mingw\include\windows.h
 	<winresrc.h>
@@ -233,27 +236,39 @@
 	<stddef.h>
 	<GL/gl.h>
 
-1713421026 d:\computer_graphics_project\car_racing\road.h
+1713702080 d:\computer_graphics_project\car_racing\road.h
 	<windows.h>
 	<GL/glut.h>
 
-1713427677 d:\computer_graphics_project\car_racing\tree.h
+1713698659 d:\computer_graphics_project\car_racing\tree.h
 	<windows.h>
 	<GL/glut.h>
 
-1713425827 d:\computer_graphics_project\car_racing\lake.h
+1713719697 d:\computer_graphics_project\car_racing\lake.h
 	<windows.h>
 	<GL/glut.h>
 
-1713433362 d:\computer_graphics_project\car_racing\building.h
+1713703142 d:\computer_graphics_project\car_racing\building.h
 	<windows.h>
 	<GL/glut.h>
 
-1713447670 d:\computer_graphics_project\car_racing\lampost.h
+1713702828 d:\computer_graphics_project\car_racing\lampost.h
 	<windows.h>
 	<GL/glut.h>
 
-1713628186 d:\computer_graphics_project\car_racing\car.h
+1713685788 d:\computer_graphics_project\car_racing\car.h
 	<windows.h>
+	<GL/glut.h>
+
+1713729342 d:\computer_graphics_project\car_racing\animation.h
+	<windows.h>
+	<GL/glut.h>
+	<cstdio>
+	"merging.h"
+
+1713719693 d:\computer_graphics_project\car_racing\merging.h
+
+1713721559 d:\computer_graphics_project\car_racing\text.h
+	<bits/stdc++.h>
 	<GL/glut.h>
 

@@ -1,10 +1,13 @@
 #include <windows.h> // for MS Windows
 #include <GL/glut.h> // GLUT, include glu.h and gl.h
 
+//GLfloat position = -0.88f;
 
 
 void car(double x,double y,double R,double G,double B,char ch)
 {
+    //glPushMatrix();
+    //glTranslatef(0.0f,position, 0.0f);
 
     double r=0.302, g=0.302, b=0.302;
     glColor3f(R, G, B);
@@ -142,7 +145,7 @@ void car(double x,double y,double R,double G,double B,char ch)
     glVertex2f(-0.48f+x, -0.89f+y);
     glVertex2f(-0.48f+x, -0.91f+y);
     glEnd();
-
+    //glPopMatrix();
 
 
 
