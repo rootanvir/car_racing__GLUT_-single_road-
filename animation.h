@@ -98,7 +98,7 @@ void scenarioAnimation()
     building(0.96,3.83f);
     building(0.90,3.43f);
     building(0.95,3.03f);
-        lake2(0.0, -1.255f);
+    lake2(0.0, -1.255f);
     pineTree(0.97f, 2.727);
     pineTree(0.8f, 2.25);
     pineTree(0.95f, 2.05);
@@ -113,9 +113,9 @@ void scenarioAnimation()
 }
 void carShaking()
 {
-        glPushMatrix();
+    glPushMatrix();
     glTranslatef(carPos,0.0f, 0.0f);
-        car(0.0f,0.0f,0.173, 0.043, 0.671,'1');
+    car(0.0f,0.0f,0.173, 0.043, 0.671,'1');
     car(0.5f,0.0f,1, 0, 0,'2');
     car(1.0f,0.0,0.024, 0.722, 0.114,'3');
 

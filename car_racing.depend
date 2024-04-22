@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713729399 source:d:\computer_graphics_project\car_racing\main.cpp
+1713806007 source:d:\computer_graphics_project\car_racing\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	"road.h"
@@ -260,7 +260,7 @@
 	<windows.h>
 	<GL/glut.h>
 
-1713729342 d:\computer_graphics_project\car_racing\animation.h
+1713806543 d:\computer_graphics_project\car_racing\animation.h
 	<windows.h>
 	<GL/glut.h>
 	<cstdio>
