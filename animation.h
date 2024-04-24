@@ -111,13 +111,23 @@ void scenarioAnimation()
 
 
 }
-void carShaking()
+void carShaking1()
 {
     glPushMatrix();
     glTranslatef(carPos,0.0f, 0.0f);
-    car(0.0f,0.0f,0.173, 0.043, 0.671,'1');
-    car(0.5f,0.0f,1, 0, 0,'2');
-    car(1.0f,0.0,0.024, 0.722, 0.114,'3');
+    car(0.25f,0.0f,0.173, 0.043, 0.671,'1');
+    //car(0.5f,0.0f,1, 0, 0,'2');
+    //car(1.0f,0.0,0.024, 0.722, 0.114,'3');
+
+    glPopMatrix();
+}
+void carShaking2()
+{
+    glPushMatrix();
+    glTranslatef(carPos,0.0f, 0.0f);
+    //car(0.0f,0.0f,0.173, 0.043, 0.671,'1');
+    car(0.75f,0.0f,1, 0, 0,'2');
+    //car(1.0f,0.0,0.024, 0.722, 0.114,'3');
 
     glPopMatrix();
 }

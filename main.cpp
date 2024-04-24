@@ -9,7 +9,7 @@
 #include "animation.h"
 #include "merging.h"
 #include "text.h"
-
+#include "carKeyboard.h"
 
 using namespace std;
 
@@ -21,8 +21,8 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
     roadSurface();
     scenarioAnimation();
-    carShaking();
-
+    car1();
+    car2();
     glFlush();
 }
 
@@ -37,6 +37,13 @@ int main(int argc, char** argv)
     glutTimerFunc(100, update, 0);
     glutTimerFunc(100, update2, 0);
     glutTimerFunc(100, carUpdate, 0);
+
+    glutTimerFunc(100, updateCarControl1, 0);
+    glutTimerFunc(100, updateCarControl2, 0);
+
+    glutSpecialFunc(specialKeys);
+    glutKeyboardFunc(handleKeypress);
+
     glutMainLoop(); // Enter the event-processing loop
     return 0;
 }
