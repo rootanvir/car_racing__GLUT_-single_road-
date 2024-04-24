@@ -126,10 +126,6 @@ void car1()
     glPopMatrix();
 }
 
-
-
-
-
 void car2()
 {
     glPushMatrix();
