@@ -7,7 +7,6 @@
 #include "lampost.h"
 #include "car.h"
 #include "animation.h"
-#include "merging.h"
 #include "text.h"
 #include "carKeyboard.h"
 
@@ -43,6 +42,7 @@ int main(int argc, char** argv)
 
     glutSpecialFunc(specialKeys);
     glutKeyboardFunc(handleKeypress);
+
 
     glutMainLoop(); // Enter the event-processing loop
     return 0;
