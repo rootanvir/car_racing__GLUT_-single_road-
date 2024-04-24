@@ -7,9 +7,8 @@
 #include "lampost.h"
 #include "car.h"
 #include "animation.h"
-#include "merging.h"
 #include "text.h"
-
+#include "carKeyboard.h"
 
 using namespace std;
 
@@ -37,6 +36,9 @@ int main(int argc, char** argv)
     glutTimerFunc(100, update, 0);
     glutTimerFunc(100, update2, 0);
     glutTimerFunc(100, carUpdate, 0);
+
+
+
     glutMainLoop(); // Enter the event-processing loop
     return 0;
 }

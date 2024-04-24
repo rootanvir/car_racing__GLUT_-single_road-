@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713806007 source:d:\computer_graphics_project\car_racing\main.cpp
+1713974471 source:d:\computer_graphics_project\car_racing\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	"road.h"
@@ -236,7 +236,7 @@
 	<stddef.h>
 	<GL/gl.h>
 
-1713702080 d:\computer_graphics_project\car_racing\road.h
+1713974471 d:\computer_graphics_project\car_racing\road.h
 	<windows.h>
 	<GL/glut.h>
 
@@ -260,15 +260,15 @@
 	<windows.h>
 	<GL/glut.h>
 
-1713806543 d:\computer_graphics_project\car_racing\animation.h
+1713974471 d:\computer_graphics_project\car_racing\animation.h
 	<windows.h>
 	<GL/glut.h>
 	<cstdio>
 	"merging.h"
 
-1713719693 d:\computer_graphics_project\car_racing\merging.h
+1713974471 d:\computer_graphics_project\car_racing\merging.h
 
-1713721559 d:\computer_graphics_project\car_racing\text.h
+1713974471 d:\computer_graphics_project\car_racing\text.h
 	<bits/stdc++.h>
 	<GL/glut.h>
 
