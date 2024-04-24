@@ -37,12 +37,16 @@ int main(int argc, char** argv)
     glutTimerFunc(100, update2, 0);
     glutTimerFunc(100, carUpdate, 0);
 
+<<<<<<< HEAD
     glutTimerFunc(100, updateCarControl1, 0);
     glutTimerFunc(100, updateCarControl2, 0);
 
     glutSpecialFunc(specialKeys);
     glutKeyboardFunc(handleKeypress);
 
+=======
+
+>>>>>>> 776b5917bc04b93a8a17870eebae1c2e2c515d36
 
     glutMainLoop(); // Enter the event-processing loop
     return 0;

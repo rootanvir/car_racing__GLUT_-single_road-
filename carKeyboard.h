@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 776b5917bc04b93a8a17870eebae1c2e2c515d36
 #include<cstdio>
 #include <bits/stdc++.h>
 #include <GL/gl.h>
@@ -43,10 +46,17 @@ void updateCarControl1(int value)
 
 void updateCarControl2(int value)
 {
+<<<<<<< HEAD
     if (car2PosX > 0.25)
         car2PosX = 0.25f;
     else if (car2PosX < -0.75)
         car2PosX = -0.75f;
+=======
+    if (car2PosX > 1.0)
+        car2PosX = -1.0f;
+    else if (car2PosX < -1.0)
+        car2PosX = 1.0f;
+>>>>>>> 776b5917bc04b93a8a17870eebae1c2e2c515d36
 
     if (car2PosY > 1.0)
         car2PosY = -1.0f;
@@ -57,6 +67,7 @@ void updateCarControl2(int value)
     glutTimerFunc(100, updateCarControl2, 0);
 }
 
+<<<<<<< HEAD
 void specialKeys(int key, int x, int y) {
     switch (key) {
     case GLUT_KEY_LEFT:
@@ -71,6 +82,18 @@ void specialKeys(int key, int x, int y) {
         {
             car2PosX += car2Speed;
         }
+=======
+
+
+
+void specialKeys(int key, int x, int y) {
+    switch (key) {
+    case GLUT_KEY_LEFT:
+        car2PosX -= car2Speed;
+        break;
+    case GLUT_KEY_RIGHT:
+        car2PosX += car2Speed;
+>>>>>>> 776b5917bc04b93a8a17870eebae1c2e2c515d36
         break;
         /*
     case GLUT_KEY_UP:
