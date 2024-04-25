@@ -1,11 +1,10 @@
-
 #include<cstdio>
 #include <bits/stdc++.h>
 #include <GL/gl.h>
 #include <GL/glut.h>
 
 // keyboard.h
-bool isCar1LeftEdge=false;
+bool isCenterFree=true;
 
 
 GLfloat car1PosX = 0.0f;
@@ -25,8 +24,8 @@ bool keyState[256] = { false };
 
 void updateCarControl1(int value)
 {
-    if (car1PosX > 0.75)
-        car1PosX = 0.75;
+    if (car1PosX > 0.25)
+        car1PosX = 0.25;
     else if (car1PosX < -0.25)
         car1PosX = -0.25f;
 
@@ -45,8 +44,8 @@ void updateCarControl2(int value)
 {
     if (car2PosX > 0.25)
         car2PosX = 0.25f;
-    else if (car2PosX < -0.75)
-        car2PosX = -0.75f;
+    else if (car2PosX < -0.25)
+        car2PosX = -0.25f;
 
     if (car2PosY > 1.0)
         car2PosY = -1.0f;
@@ -60,8 +59,12 @@ void updateCarControl2(int value)
 void specialKeys(int key, int x, int y) {
     switch (key) {
     case GLUT_KEY_LEFT:
-        if(car2PosX>-0.75)
+        if(car2PosX>-0.25  )
         {
+            if( car1PosX == 0.25 && car2PosX== 0.0f)
+            {
+                break;
+            }
             car2PosX -= car2Speed;
         }
         break;
@@ -97,8 +100,12 @@ void handleKeypress(unsigned char key, int x, int y)
 
         break;
     case 'd':
-        if(car1PosX<0.75)
+        if(car1PosX<0.25 )
         {
+            if( car2PosX==-0.25 && car1PosX == 0.0f)
+            {
+                break;
+            }
             car1PosX += car1Speed;
         }
 
@@ -125,6 +132,10 @@ void car1()
 
     glPopMatrix();
 }
+
+
+
+
 
 void car2()
 {

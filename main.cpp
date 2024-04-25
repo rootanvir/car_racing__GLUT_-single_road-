@@ -29,10 +29,12 @@ void display()
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
+    cout<<"glut initialized"<<endl;
     glutInitWindowSize(640, 480); // Set the window's initial width & height
-    glutInitWindowPosition(80, 50);  // Set the window's initial position according to the monitor
+    glutInitWindowPosition(300, 300);  // Set the window's initial position according to the monitor
     glutCreateWindow("Car Racing"); // Create a window with the given title
     glutDisplayFunc(display); // Register display callback handler for window re-paint
+    cout<<"Display initialized"<<endl;
     glutTimerFunc(100, update, 0);
     glutTimerFunc(100, update2, 0);
     glutTimerFunc(100, carUpdate, 0);
