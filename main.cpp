@@ -1,5 +1,7 @@
+#include <bits/stdc++.h>
 #include <windows.h> // for MS Windows
 #include <GL/glut.h> // GLUT, include glu.h and gl.h
+
 #include "road.h"
 #include "tree.h"
 #include "lake.h"
@@ -9,9 +11,9 @@
 #include "animation.h"
 #include "text.h"
 #include "carKeyboard.h"
+//#include "group.h"
 
 using namespace std;
-
 
 
 void display()
@@ -22,8 +24,10 @@ void display()
     scenarioAnimation();
     car1();
     car2();
+    police();
     glFlush();
 }
+
 
 /* Main function: GLUT runs as a console application starting at main() */
 int main(int argc, char** argv)
@@ -34,18 +38,21 @@ int main(int argc, char** argv)
     glutInitWindowPosition(300, 300);  // Set the window's initial position according to the monitor
     glutCreateWindow("Car Racing"); // Create a window with the given title
     glutDisplayFunc(display); // Register display callback handler for window re-paint
-    cout<<"Display initialized"<<endl;
+    cout<<"display initialized"<<endl;
+
     glutTimerFunc(100, update, 0);
     glutTimerFunc(100, update2, 0);
     glutTimerFunc(100, carUpdate, 0);
-
+    glutTimerFunc(300, updatePolice, 0);
+    glutTimerFunc(300, updateObsticle, 0);
 
     glutTimerFunc(100, updateCarControl1, 0);
     glutTimerFunc(100, updateCarControl2, 0);
-
     glutSpecialFunc(specialKeys);
     glutKeyboardFunc(handleKeypress);
 
     glutMainLoop(); // Enter the event-processing loop
+
+
     return 0;
 }

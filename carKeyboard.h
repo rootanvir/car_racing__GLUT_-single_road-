@@ -2,11 +2,15 @@
 #include <bits/stdc++.h>
 #include <GL/gl.h>
 #include <GL/glut.h>
-
+using namespace std;
 // keyboard.h
 bool isCenterFree=true;
+bool isGroupOpen=false;
+///////////////////
+void displayGroupInfo();
+void display();
 
-
+//////////////////
 GLfloat car1PosX = 0.0f;
 GLfloat car1PosY = 0.0f;
 GLfloat car1Speed= 0.25f;
@@ -17,7 +21,7 @@ GLfloat car2PosX = 0.0f;
 GLfloat car2PosY = 0.0f;
 GLfloat car2Speed = 0.25f;
 
-
+///////////////////////
 
 
 bool keyState[256] = { false };
@@ -110,7 +114,23 @@ void handleKeypress(unsigned char key, int x, int y)
         }
 
         break;
-   /* case 'w':
+    /*case 'G':
+        cout<<"G"<<endl;
+        if(!isGroupOpen)
+        {
+          glutDisplayFunc(displayGroupInfo);
+          isGroupOpen=true;
+          //glutIdleFunc(NULL);
+        }
+        else
+        {
+            glutDisplayFunc(display);
+            isGroupOpen=false;
+            //glutIdleFunc(display);
+        }
+
+        break;*/
+   /*case 'w':
         car1PosY += car1Speed;
         break;
     case 's':
@@ -128,8 +148,6 @@ void car1()
     glPushMatrix();
     glTranslatef(car1PosX, car1PosY, 0.0f);
     carShaking1();
-
-
     glPopMatrix();
 }
 

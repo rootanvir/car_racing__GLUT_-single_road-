@@ -148,6 +148,4 @@ void car(double x,double y,double R,double G,double B,char ch)
     //glPopMatrix();
 
 
-
-
 }
