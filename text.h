@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 #include <GL/glut.h>
 
-void renderBitmapString(float x, float y, float z, void *font, char *string)
+void renderBitmapString(float x, float y, float z, void* font,  char* string)
+
 {
     char *c;
     glRasterPos3f(x, y,z);

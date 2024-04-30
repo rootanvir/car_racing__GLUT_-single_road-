@@ -327,7 +327,7 @@
 	<GL/gl.h>
 	<GL/glut.h>
 
-1714397281 source:d:\cg project\car_racing__glut_-single_road-\main.cpp
+1714458653 source:d:\cg project\car_racing__glut_-single_road-\main.cpp
 	<bits/stdc++.h>
 	<windows.h>
 	<GL/glut.h>
@@ -340,8 +340,12 @@
 	"animation.h"
 	"text.h"
 	"carKeyboard.h"
+	"scoreBoard.h"
+	"iconPack.h"
+	"EssentialFunction.h"
+	"group.h"
 
-1713974798 d:\cg project\car_racing__glut_-single_road-\road.h
+1714424145 d:\cg project\car_racing__glut_-single_road-\road.h
 	<windows.h>
 	<GL/glut.h>
 
@@ -361,28 +365,43 @@
 	<windows.h>
 	<GL/glut.h>
 
-1714395646 d:\cg project\car_racing__glut_-single_road-\car.h
+1714423960 d:\cg project\car_racing__glut_-single_road-\car.h
 	<windows.h>
 	<GL/glut.h>
 
-1714397891 d:\cg project\car_racing__glut_-single_road-\animation.h
+1714424116 d:\cg project\car_racing__glut_-single_road-\animation.h
 	<windows.h>
 	<GL/glut.h>
 	<cstdio>
 
 1713974798 d:\cg project\car_racing__glut_-single_road-\merging.h
 
-1714034058 d:\cg project\car_racing__glut_-single_road-\text.h
+1714455398 d:\cg project\car_racing__glut_-single_road-\text.h
 	<bits/stdc++.h>
 	<GL/glut.h>
 
-1714038830 d:\cg project\car_racing__glut_-single_road-\carkeyboard.h
+1714458698 d:\cg project\car_racing__glut_-single_road-\carkeyboard.h
 	<cstdio>
 	<bits/stdc++.h>
 	<GL/gl.h>
 	<GL/glut.h>
 
-1714036134 d:\cg project\car_racing__glut_-single_road-\group.h
+1714458985 d:\cg project\car_racing__glut_-single_road-\group.h
 	<bits/stdc++.h>
 	<GL/glut.h>
+
+1714457787 d:\cg project\car_racing__glut_-single_road-\scoreboard.h
+	<windows.h>
+	<GL/glut.h>
+	<bits/stdc++.h>
+	<string.h>
+
+1714451122 d:\cg project\car_racing__glut_-single_road-\iconpack.h
+	<windows.h>
+	<GL/glut.h>
+
+1714456233 d:\cg project\car_racing__glut_-single_road-\essentialfunction.h
+	<bits/stdc++.h>
+	<GL/glut.h>
+	<bits/stdc++.h>
 

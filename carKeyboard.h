@@ -114,7 +114,7 @@ void handleKeypress(unsigned char key, int x, int y)
         }
 
         break;
-    /*case 'G':
+    case 'G':
         cout<<"G"<<endl;
         if(!isGroupOpen)
         {
@@ -129,7 +129,7 @@ void handleKeypress(unsigned char key, int x, int y)
             //glutIdleFunc(display);
         }
 
-        break;*/
+        break;
    /*case 'w':
         car1PosY += car1Speed;
         break;

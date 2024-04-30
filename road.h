@@ -19,31 +19,33 @@ void roadDashed()
     for(double i=2.0f; i>-2.0f; i-=0.2f)
     {
 
-            glLineWidth(3); //---2nd row start--
-    glBegin(GL_LINES);
-    glColor3f(1.0f,1.0,1.0);
-    glVertex2f(0.125,i);
-    glVertex2f(0.125,i+0.1f);
-    glEnd();
-    glEnd();
+        glLineWidth(3); //---2nd row start--
+        glBegin(GL_LINES);
+        glColor3f(1.0f,1.0,1.0);
+        glVertex2f(0.125,i);
+        glVertex2f(0.125,i+0.1f);
+        glEnd();
+        glEnd();
     }
 
-    for(double i=2.0f; i>-2.0f; i-=0.2f){
+    for(double i=2.0f; i>-2.0f; i-=0.2f)
+    {
         glLineWidth(3);//------3rd row started
-    glBegin(GL_LINES);
-    glColor3f(1.0f,1.0,1.0);
-    glVertex2f(-0.125,i);
-    glVertex2f(-0.125,i+0.1f);
-    glEnd();
+        glBegin(GL_LINES);
+        glColor3f(1.0f,1.0,1.0);
+        glVertex2f(-0.125,i);
+        glVertex2f(-0.125,i+0.1f);
+        glEnd();
     }
 
-    for(double i=2.0f; i>-2.0f; i-=0.2f){
+    for(double i=2.0f; i>-2.0f; i-=0.2f)
+    {
         glLineWidth(3);//----4th row started
-    glBegin(GL_LINES);
-    glColor3f(1.0f,1.0,1.0);
-    glVertex2f(-0.375,i);
-    glVertex2f(-0.375,i+0.1f);
-    glEnd();
+        glBegin(GL_LINES);
+        glColor3f(1.0f,1.0,1.0);
+        glVertex2f(-0.375,i);
+        glVertex2f(-0.375,i+0.1f);
+        glEnd();
     }
 
 
@@ -87,7 +89,7 @@ void roadSurface()
 void roadSide()
 
 {
-        {
+    {
 
         double x1=-0.65f,x2=-0.625f,y1=-2.1f,y2=-2.00f;
         double increase=0.2;

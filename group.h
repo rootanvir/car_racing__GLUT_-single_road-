@@ -2,10 +2,11 @@
 #include <GL/glut.h>
 
 
+
 void display();
 void groupInfo()
 {
-    glColor3f(1.0,0.0,0.0);
+    glColor3f(1.0,1.0,1.0);
     renderBitmapString(-0.4f, 0.9f, 0.0f, GLUT_BITMAP_TIMES_ROMAN_24, "American International University - Bangladesh (AIUB)");
     renderBitmapString(-0.3f, 0.8f, 0.0f, GLUT_BITMAP_TIMES_ROMAN_24, "Course Name : Computer Graphics");
     renderBitmapString(-0.19f, 0.7f, 0.0f, GLUT_BITMAP_TIMES_ROMAN_24, "Section :[H]");
@@ -32,7 +33,7 @@ void groupInfo()
 
 void displayGroupInfo()
 {
-    glClearColor(1.0,1.0f,1.0f, 0.0f); // Set background color to black and opaque
+    glClearColor(0.0,0.0f,0.0f, 0.0f); // Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
     groupInfo();
     glFlush();
@@ -63,5 +64,5 @@ void handleKeypressGroupInfo(unsigned char key, int x, int y)
     }
 
     glutPostRedisplay();
-} */
-
+}
+*/

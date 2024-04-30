@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 #include <windows.h> // for MS Windows
 #include <GL/glut.h> // GLUT, include glu.h and gl.h
-
 #include "road.h"
 #include "tree.h"
 #include "lake.h"
@@ -11,7 +10,10 @@
 #include "animation.h"
 #include "text.h"
 #include "carKeyboard.h"
-//#include "group.h"
+#include "scoreBoard.h"
+#include "iconPack.h"
+#include "EssentialFunction.h"
+#include "group.h"
 
 using namespace std;
 
@@ -25,6 +27,7 @@ void display()
     car1();
     car2();
     police();
+    scoreBoard();
     glFlush();
 }
 
@@ -33,24 +36,31 @@ void display()
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
+    cout<<"Loading...."<<endl;
+    Sleep(100);
     cout<<"glut initialized"<<endl;
+    Sleep(200);
     glutInitWindowSize(640, 480); // Set the window's initial width & height
     glutInitWindowPosition(300, 300);  // Set the window's initial position according to the monitor
     glutCreateWindow("Car Racing"); // Create a window with the given title
     glutDisplayFunc(display); // Register display callback handler for window re-paint
+
+    Sleep(200);
     cout<<"display initialized"<<endl;
 
     glutTimerFunc(100, update, 0);
     glutTimerFunc(100, update2, 0);
     glutTimerFunc(100, carUpdate, 0);
     glutTimerFunc(300, updatePolice, 0);
-    glutTimerFunc(300, updateObsticle, 0);
+    glutTimerFunc(300, updateObstacle, 0);
+    glutTimerFunc(300, updateFuel, 0);
+    glutTimerFunc(300,updateDistance,0);
 
     glutTimerFunc(100, updateCarControl1, 0);
     glutTimerFunc(100, updateCarControl2, 0);
     glutSpecialFunc(specialKeys);
     glutKeyboardFunc(handleKeypress);
-
+    //glutKeyboardFunc(handleKeypressGroupInfo);
     glutMainLoop(); // Enter the event-processing loop
 
 
