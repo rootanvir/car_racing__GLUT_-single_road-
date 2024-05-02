@@ -6,7 +6,8 @@ void startDisplay();
 void menu1Sound();
 void menu2Sound();
 void carEngineStart();
-
+void enterSound();
+void updateObstacle(int value);
 
 
 
@@ -162,24 +163,24 @@ void specialKeysStart(int key, int x, int y)
     break;
     */
 
-    /*
+/*
     case GLUT_KEY_UP:
-        menu2Sound();
-
-        if(selectPos>-0.2f)
-            selectPos=-0.8f;
-        selectPos += selectPosChangeRate;
-        break;   */
+        menu1Sound();
+    selectPos += 0.2f; // Increase selectPos first
+        if(selectPos>0.0f)
+            selectPos=-0.6f;
+        break;*/
     case GLUT_KEY_DOWN:
         menu2Sound();
-        if(selectPos<-0.4f)
-            selectPos=0.2f;
         selectPos -= selectPosChangeRate;
+        if(selectPos<-0.6f)
+            selectPos=0.0f;
+
         break;
     default:
         break; // Handle other keys if needed
     }
-    cout<<selectPos<<endl;
+    //cout<<selectPos<<endl;
     glutPostRedisplay();
 }
 void keyboard(unsigned char key, int x, int y)
@@ -187,8 +188,12 @@ void keyboard(unsigned char key, int x, int y)
 
     if (key == 13)
     {
+        enterSound();
         if(selectPos==0.0f)
         {
+
+
+
 
             glutDisplayFunc(display);
             glutTimerFunc(100, update, 0);
@@ -207,6 +212,7 @@ void keyboard(unsigned char key, int x, int y)
         if(selectPos==-0.2f)
         {
             cout<<"How to Play"<<endl;
+            //cout<<printRandom()<<endl;
         }
         else if(selectPos == -0.4f)
         {
@@ -231,6 +237,7 @@ void keyboard(unsigned char key, int x, int y)
             glutDisplayFunc(startDisplay);
             //glutTimerFunc(300,updateMovingCarInStart,0);
             isGroupOpen=false;
+            menu1Sound();
 
         }
     }

@@ -14,6 +14,10 @@ void carEngineStart()
 {
         PlaySound("resources/car/car_engine_start.wav", NULL,SND_ASYNC|SND_FILENAME);
 }
+void enterSound()
+{
+        PlaySound("resources/menu_sound/enter.wav", NULL,SND_ASYNC|SND_FILENAME);
+}
 
 
 

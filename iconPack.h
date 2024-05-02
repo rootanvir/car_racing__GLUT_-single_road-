@@ -64,6 +64,9 @@ void thunder(double x,double y)
 
 void heart(double x,double y)
 {
+
+
+
     glBegin(GL_POLYGON);
     glColor3f(1.0f,0.0f,0.0f);
     glVertex2f(0.68f+x, 0.88f+y);
@@ -105,10 +108,15 @@ void updateFuel(int value)
 }
 void allIcon()
 {
+
+
+    glTranslatef(0.0f, 0.0f, 0.0f);
+    glRotatef(45.0f, 0.0f, 0.0f, 1.0f);
     iconFuel(0.0,0.0);
     thunder(0.0,0.0);
     heart(0.0,0.0);
     heart(0.05,0.0);
     heart(0.1,0.0);
     fuelStatus(0.0,0.0);
+
 }

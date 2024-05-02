@@ -74,17 +74,7 @@ void updatePolice(int value)
     glutPostRedisplay();
     glutTimerFunc(300, updatePolice,0);
 }
-void updateObstacle(int value)
-{
 
-    if(obPos < -2.0f)
-        obPos = 1.03;
-    //else if(obPos<-1.03f)
-        //obPos = 1.03;
-    obPos -= obSpeed;
-    glutPostRedisplay();
-    glutTimerFunc(100, updateObstacle,0);
-}
 void scenarioAnimation()
 {
     glPushMatrix();

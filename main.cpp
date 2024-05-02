@@ -19,6 +19,7 @@
 #include "group.h"
 #include "StartingPage.h"
 #include "sound.h"
+#include "obstacle.h"
 
 using namespace std;
 
@@ -30,7 +31,7 @@ void display()
     scenarioAnimation();
     car1();
     car2();
-    police();
+    generateObstacle();
     scoreBoard();
     glFlush();
 }
@@ -46,6 +47,7 @@ void startDisplay()
 /* Main function: GLUT runs as a console application starting at main() */
 int main(int argc, char** argv)
 {
+    menu2Sound();
 
     /////////////
     glutInit(&argc, argv);
