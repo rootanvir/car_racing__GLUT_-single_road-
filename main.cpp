@@ -47,7 +47,6 @@ void startDisplay()
 int main(int argc, char** argv)
 {
 
-initMenuSound();
     /////////////
     glutInit(&argc, argv);
     cout<<"Loading...."<<endl;
@@ -58,14 +57,14 @@ initMenuSound();
     glutInitWindowPosition(300, 300);  // Set the window's initial position according to the monitor
     glutCreateWindow("Car Racing"); // Create a window with the given title
     // Register display callback handler for window re-paint
-    if(isInStart)
+    if(true)
     {
 
         glutDisplayFunc(startDisplay);
         glutTimerFunc(300,updateMovingCarInStart,0);
         glutSpecialFunc(specialKeysStart);
         glutKeyboardFunc(keyboard);
-        isInStart=true;
+        //isInStart=true;
 
     }
    else
@@ -83,7 +82,7 @@ initMenuSound();
         glutTimerFunc(100, updateCarControl2, 0);
         glutSpecialFunc(specialKeys);
         glutKeyboardFunc(handleKeypress);
-        isInStart=false;
+        //isInStart=false;
     }
     Sleep(200);
     cout<<"display initialized"<<endl;

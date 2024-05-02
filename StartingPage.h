@@ -11,7 +11,6 @@ void carEngineStart();
 
 
 bool isGroupOpen=false;
-GLfloat isInStart=true;
 
 GLfloat carPosStart = -1.0f;
 GLfloat speedInStart = 0.1f;
@@ -140,6 +139,7 @@ void selector(double x,double y)
 void specialKeysStart(int key, int x, int y)
 {
 
+
     switch (key)
     {
     /*
@@ -161,27 +161,30 @@ void specialKeysStart(int key, int x, int y)
     }
     break;
     */
+
+    /*
     case GLUT_KEY_UP:
         menu2Sound();
+
+        if(selectPos>-0.2f)
+            selectPos=-0.8f;
         selectPos += selectPosChangeRate;
-        if(selectPos>0.0)
-            selectPos=-.6;
-
-        break;
+        break;   */
     case GLUT_KEY_DOWN:
-        menu1Sound();
-        if(selectPos<-0.6)
-            selectPos=0.2;
+        menu2Sound();
+        if(selectPos<-0.4f)
+            selectPos=0.2f;
         selectPos -= selectPosChangeRate;
-
         break;
     default:
         break; // Handle other keys if needed
     }
+    cout<<selectPos<<endl;
     glutPostRedisplay();
 }
 void keyboard(unsigned char key, int x, int y)
 {
+
     if (key == 13)
     {
         if(selectPos==0.0f)
@@ -199,7 +202,7 @@ void keyboard(unsigned char key, int x, int y)
             glutTimerFunc(100, updateCarControl2, 0);
             glutSpecialFunc(specialKeys);
             glutKeyboardFunc(handleKeypress);
-            isInStart=false;
+
         }
         if(selectPos==-0.2f)
         {
@@ -209,11 +212,10 @@ void keyboard(unsigned char key, int x, int y)
         {
             if(!isGroupOpen)
             {
+
                 glutDisplayFunc(displayGroupInfo);
                 isGroupOpen=true;
-
             }
-            isInStart=false;
         }
         else if(selectPos == -0.6f)
         {
@@ -227,8 +229,9 @@ void keyboard(unsigned char key, int x, int y)
         if(isGroupOpen)
         {
             glutDisplayFunc(startDisplay);
+            //glutTimerFunc(300,updateMovingCarInStart,0);
             isGroupOpen=false;
-            //glutIdleFunc(display);
+
         }
     }
 }
