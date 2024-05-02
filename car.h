@@ -297,7 +297,7 @@ void police_car(double x,double y)
     glEnd();
 
 
-    glColor3f(0.969, 0.745, 0.024W);
+    glColor3f(0.969, 0.745, 0.024);
     glBegin(GL_LINE_STRIP);
     glVertex2f(-0.54f+x, -0.54f+y);
     glVertex2f(-0.55f+x, -0.58f+y);

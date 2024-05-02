@@ -9,10 +9,11 @@ void heart(double x,double y);
 void thunder(double x,double y);
 void fuelStatus(double x,double y);
 
-char chDistance[10]="0.0 km";
 
-GLfloat distanceCar=0.0f;
-GLfloat displacement =0.1f;
+double distanceOfCar=0.0f;
+double displacement =0.02f;
+char numString[10];
+
 
 void BoardLeft()
 {
@@ -42,9 +43,12 @@ void leftScoreBoard()
     heart(0.05,0.0);
     heart(0.1,0.0);
     fuelStatus(0,0);
-    char c[]="Distance: ";
-    renderBitmapString(0.81,0.75,0.0,GLUT_BITMAP_TIMES_ROMAN_24,c);
-    renderBitmapString(0.92,0.75,0.0,GLUT_BITMAP_TIMES_ROMAN_24,chDistance);
+    char c[]="Distance ";
+    char km[]="km";
+
+    renderBitmapString(0.78,0.75,0.0,GLUT_BITMAP_TIMES_ROMAN_24,c);
+    renderBitmapString(0.88,0.75,0.0,GLUT_BITMAP_TIMES_ROMAN_24,numString);
+    renderBitmapString(0.96,0.75,0.0,GLUT_BITMAP_TIMES_ROMAN_24,km);
 
 }
 void rightScoreBoard(double x,double y)
@@ -59,11 +63,14 @@ void rightScoreBoard(double x,double y)
 }
 void updateDistance(int value)
 {
-    distanceCar+=displacement;
-    //chDistance=strToChar("1");
+    distanceOfCar += displacement; // Increment distanceOfCar by displacement
 
+    sprintf(numString, "%.2f", distanceOfCar);
+    //cout << numString << endl;
     glutPostRedisplay();
-    glutTimerFunc(800, updateDistance, 0);
+
+    // Call glutTimerFunc again to keep updating the distance periodically
+    glutTimerFunc(300, updateDistance, 0);
 
 }
 void scoreBoard()

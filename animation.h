@@ -176,6 +176,16 @@ void carShaking2()
 
     glPopMatrix();
 }
+void policeCarDummy()
+{
+    glPushMatrix();
+    glTranslatef(carPos,0.0f, 0.0f);
+    //car(0.0f,0.0f,0.173, 0.043, 0.671,'1');
+    police_car(0.0,0.0);
+    //car(1.0f,0.0,0.024, 0.722, 0.114,'3');
+
+    glPopMatrix();
+}
 void police()
 {
     glPushMatrix();
