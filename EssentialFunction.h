@@ -13,9 +13,8 @@ char* strToChar(const std::string& str) {
 }
 
 double printRandom(double start, double step, double end) {
-    // Create a random device and a random number generator
-    static std::random_device rd;
-    static std::mt19937 gen(rd());
+    // Define random number generator as a static variable to preserve its state
+    static std::mt19937 gen(std::random_device{}());
 
     // Calculate the number of steps within the range
     int numSteps = static_cast<int>((end - start) / step);
@@ -31,6 +30,7 @@ double printRandom(double start, double step, double end) {
 
     return randomValue;
 }
+
 
 
 

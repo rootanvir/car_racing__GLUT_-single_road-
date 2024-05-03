@@ -4,6 +4,10 @@
 GLfloat fuelX=0.0f;
 GLfloat decrease=0.005f;
 
+
+
+
+
 void iconFuel(double x,double y)
 {
     glLineWidth(8);
@@ -106,17 +110,13 @@ void updateFuel(int value)
     glutPostRedisplay();
     glutTimerFunc(500, updateFuel,0);
 }
-void allIcon()
-{
 
+void allIcon() {
 
-    glTranslatef(0.0f, 0.0f, 0.0f);
-    glRotatef(45.0f, 0.0f, 0.0f, 1.0f);
     iconFuel(0.0,0.0);
     thunder(0.0,0.0);
     heart(0.0,0.0);
     heart(0.05,0.0);
     heart(0.1,0.0);
     fuelStatus(0.0,0.0);
-
 }

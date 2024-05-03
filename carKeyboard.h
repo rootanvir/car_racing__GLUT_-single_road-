@@ -2,6 +2,7 @@
 #include <bits/stdc++.h>
 #include <GL/gl.h>
 #include <GL/glut.h>
+
 using namespace std;
 // keyboard.h
 bool isCenterFree=true;
@@ -63,6 +64,7 @@ void updateCarControl2(int value)
 void specialKeys(int key, int x, int y) {
     switch (key) {
     case GLUT_KEY_LEFT:
+
         if(car2PosX>-0.25  )
         {
             if( car1PosX == 0.25 && car2PosX== 0.0f)

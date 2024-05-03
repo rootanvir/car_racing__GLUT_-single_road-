@@ -9,7 +9,7 @@
 #include "lake.h"
 #include "building.h"
 #include "lampost.h"
-#include "car.h"
+#include "vehicle.h"
 #include "animation.h"
 #include "text.h"
 #include "carKeyboard.h"
@@ -29,9 +29,10 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
     roadSurface();
     scenarioAnimation();
+    generateObstacle();
     car1();
     car2();
-    generateObstacle();
+
     scoreBoard();
     glFlush();
 }
@@ -59,6 +60,13 @@ int main(int argc, char** argv)
     glutInitWindowPosition(300, 300);  // Set the window's initial position according to the monitor
     glutCreateWindow("Car Racing"); // Create a window with the given title
     // Register display callback handler for window re-paint
+    glClearColor(1.0, 1.0, 1.0, 1.0);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluOrtho2D(-1.0, 1.0, -1.0, 1.0);
+
+
+
     if(true)
     {
 
@@ -66,6 +74,7 @@ int main(int argc, char** argv)
         glutTimerFunc(300,updateMovingCarInStart,0);
         glutSpecialFunc(specialKeysStart);
         glutKeyboardFunc(keyboard);
+
         //isInStart=true;
 
     }

@@ -191,10 +191,6 @@ void keyboard(unsigned char key, int x, int y)
         enterSound();
         if(selectPos==0.0f)
         {
-
-
-
-
             glutDisplayFunc(display);
             glutTimerFunc(100, update, 0);
             glutTimerFunc(100, update2, 0);
@@ -205,6 +201,9 @@ void keyboard(unsigned char key, int x, int y)
             glutTimerFunc(300,updateDistance,0);
             glutTimerFunc(100, updateCarControl1, 0);
             glutTimerFunc(100, updateCarControl2, 0);
+
+            glutTimerFunc(100,scoreBoardUpdate, 0);
+
             glutSpecialFunc(specialKeys);
             glutKeyboardFunc(handleKeypress);
 
@@ -247,7 +246,6 @@ void startingPage()
 
     start();
     startingAnimation();
-
     background(0.0,0.0);
     selector(0.0,0.0);
     title(0.0,0.0);

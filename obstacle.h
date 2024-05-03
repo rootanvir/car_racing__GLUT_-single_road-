@@ -4,25 +4,28 @@
 #include<cstdio>
 
 bool firstTime=true;
-GLfloat obstaclePosX = 0.5f;
-GLfloat obstaclePosY = 2.0f;
+double choose;
 GLfloat obstacleSpeed = 0.05f;
 
 
 void updateObstacle(int value)
 {
+
+
     if(firstTime)
     {
          obstaclePosX=printRandom(0.0f,0.25f,1.0f);
+
          firstTime=false;
     }
-
 
     if(obstaclePosY<-1.4f)
     {
         obstaclePosY=2.0f;
         obstaclePosX=printRandom(0.0f,0.25f,1.0f);
-        cout<<obstaclePosX<<endl;
+
+        choose=printRandom(1.0,1.0,2.0);
+        //cout<<obstaclePosX<<endl;
     }
 
     obstaclePosY-=obstacleSpeed ;
@@ -33,6 +36,16 @@ void updateObstacle(int value)
 
 void generateObstacle()
 {
-    police_car(obstaclePosX,obstaclePosY);
-    police_car(obstaclePosX,obstaclePosY);
+
+    if(choose==1.0f)
+    {
+        police_car(0.03f+obstaclePosX,obstaclePosY);
+    }
+    else
+    {
+        truck(-0.5+obstaclePosX,obstaclePosY);
+    }
+
+
+    //police_car(obstaclePosX,obstaclePosY);
 }
