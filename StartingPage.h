@@ -94,7 +94,7 @@ void startingAnimation()
     }
     else if(serial==4)
     {
-        police_car(0.5,0.0);
+        normal_car(0.5,0.0);
     }
     glPopMatrix();
 }

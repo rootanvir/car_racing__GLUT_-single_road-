@@ -23,10 +23,17 @@
 
 using namespace std;
 
+int screen_width = glutGet(GLUT_SCREEN_WIDTH);
+int screen_height = glutGet(GLUT_SCREEN_HEIGHT);
+
+
 void display()
 {
-    glClearColor(0.156f,0.61f,0.337f, 0.0f); // Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
+    //glViewport(0, 0, screen_width, screen_height);
+
+    glClearColor(0.156f,0.61f,0.337f, 0.0f); // Set background color to black and opaque
+
     roadSurface();
     scenarioAnimation();
     generateObstacle();
@@ -56,8 +63,8 @@ int main(int argc, char** argv)
     Sleep(1000);
     cout<<"glut initialized"<<endl;
     Sleep(200);
-    glutInitWindowSize(640, 480); // Set the window's initial width & height
-    glutInitWindowPosition(300, 300);  // Set the window's initial position according to the monitor
+    glutInitWindowSize(screen_width, screen_height); // Set the window's initial width & height
+    glutInitWindowPosition(0, 0);  // Set the window's initial position according to the monitor
     glutCreateWindow("Car Racing"); // Create a window with the given title
     // Register display callback handler for window re-paint
     glClearColor(1.0, 1.0, 1.0, 1.0);
@@ -78,7 +85,7 @@ int main(int argc, char** argv)
         //isInStart=true;
 
     }
-   else
+    else
     {
         cout<<"2nsd"<<endl;
         glutDisplayFunc(display);

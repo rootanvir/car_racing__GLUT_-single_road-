@@ -24,7 +24,7 @@ void updateObstacle(int value)
         obstaclePosY=2.0f;
         obstaclePosX=printRandom(0.0f,0.25f,1.0f);
 
-        choose=printRandom(1.0,1.0,2.0);
+        choose=printRandom(1.0,1.0,3.0);
         //cout<<obstaclePosX<<endl;
     }
 
@@ -41,9 +41,13 @@ void generateObstacle()
     {
         police_car(0.03f+obstaclePosX,obstaclePosY);
     }
-    else
+    else if (choose ==2.0f)
     {
         truck(-0.5+obstaclePosX,obstaclePosY);
+    }
+    else if(choose == 3.0f)
+    {
+        normal_car(-0.5f+obstaclePosX,obstaclePosY);
     }
 
 
