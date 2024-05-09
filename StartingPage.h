@@ -8,7 +8,7 @@ void menu2Sound();
 void carEngineStart();
 void enterSound();
 void updateObstacle(int value);
-
+void displayInstruction();
 
 
 bool isGroupOpen=false;
@@ -211,7 +211,13 @@ void keyboard(unsigned char key, int x, int y)
         if(selectPos==-0.2f)
         {
             cout<<"How to Play"<<endl;
-            //cout<<printRandom()<<endl;
+            if(!isGroupOpen)
+            {
+
+                glutDisplayFunc(displayInstruction);
+                isGroupOpen=true;
+            }
+
         }
         else if(selectPos == -0.4f)
         {

@@ -20,7 +20,7 @@
 #include "StartingPage.h"
 #include "sound.h"
 #include "obstacle.h"
-
+#include "instructions.h"
 using namespace std;
 
 int screen_width = glutGet(GLUT_SCREEN_WIDTH);
@@ -71,7 +71,7 @@ int main(int argc, char** argv)
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(-1.0, 1.0, -1.0, 1.0);
-
+    glutSetIconTitle("icon.ico");
 
 
     if(true)
