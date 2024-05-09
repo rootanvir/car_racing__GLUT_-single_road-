@@ -45,6 +45,7 @@
 		<Unit filename="EssentialFunction.h" />
 		<Unit filename="animation.h" />
 		<Unit filename="iconPack.h" />
+		<Unit filename="instructions.h" />
 		<Unit filename="lampost.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="obstacle.h" />

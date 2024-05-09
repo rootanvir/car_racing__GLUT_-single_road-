@@ -327,7 +327,7 @@
 	<GL/gl.h>
 	<GL/glut.h>
 
-1715247341 source:d:\cg project\car_racing__glut_-single_road-\main.cpp
+1715255422 source:d:\cg project\car_racing__glut_-single_road-\main.cpp
 	<bits/stdc++.h>
 	<windows.h>
 	<GL/glut.h>
@@ -421,13 +421,13 @@
 	<bits/stdc++.h>
 	<cstdio>
 
-1714850240 d:\cg project\car_racing__glut_-single_road-\obstacle.h
+1715256452 d:\cg project\car_racing__glut_-single_road-\obstacle.h
 	<windows.h>
 	<GL/glut.h>
 	<bits/stdc++.h>
 	<cstdio>
 
-1714851686 d:\cg project\car_racing__glut_-single_road-\vehicle.h
+1715250789 d:\cg project\car_racing__glut_-single_road-\vehicle.h
 	<windows.h>
 	<GL/glut.h>
 
