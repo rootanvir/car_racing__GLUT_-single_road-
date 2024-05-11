@@ -63,8 +63,8 @@ int main(int argc, char** argv)
     Sleep(1000);
     cout<<"glut initialized"<<endl;
     Sleep(200);
-    glutInitWindowSize(screen_width, screen_height); // Set the window's initial width & height
-    glutInitWindowPosition(0, 0);  // Set the window's initial position according to the monitor
+    glutInitWindowSize(1200, 900); // Set the window's initial width & height
+    glutInitWindowPosition(100, 100);  // Set the window's initial position according to the monitor
     glutCreateWindow("Car Racing"); // Create a window with the given title
     // Register display callback handler for window re-paint
     glClearColor(1.0, 1.0, 1.0, 1.0);
@@ -73,7 +73,6 @@ int main(int argc, char** argv)
     gluOrtho2D(-1.0, 1.0, -1.0, 1.0);
     glutSetIconTitle("icon.ico");
 
-
     if(true)
     {
 
@@ -81,7 +80,7 @@ int main(int argc, char** argv)
         glutTimerFunc(300,updateMovingCarInStart,0);
         glutSpecialFunc(specialKeysStart);
         glutKeyboardFunc(keyboard);
-
+        //glutFullScreen();
         //isInStart=true;
 
     }

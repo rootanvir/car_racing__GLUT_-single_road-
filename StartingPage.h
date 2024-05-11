@@ -10,7 +10,6 @@ void enterSound();
 void updateObstacle(int value);
 void displayInstruction();
 
-
 bool isGroupOpen=false;
 
 GLfloat carPosStart = -1.0f;
@@ -177,6 +176,7 @@ void specialKeysStart(int key, int x, int y)
             selectPos=0.0f;
 
         break;
+
     default:
         break; // Handle other keys if needed
     }
@@ -201,9 +201,7 @@ void keyboard(unsigned char key, int x, int y)
             glutTimerFunc(300,updateDistance,0);
             glutTimerFunc(100, updateCarControl1, 0);
             glutTimerFunc(100, updateCarControl2, 0);
-
             glutTimerFunc(100,scoreBoardUpdate, 0);
-
             glutSpecialFunc(specialKeys);
             glutKeyboardFunc(handleKeypress);
 
@@ -245,6 +243,21 @@ void keyboard(unsigned char key, int x, int y)
             menu1Sound();
 
         }
+    }
+    else if(key == 'F' )
+    {
+        if(!isFullScreen)
+        {
+            glutFullScreen();
+            isFullScreen=true;
+        }
+        else
+        {
+            glutPositionWindow(100,100);
+            glutReshapeWindow(1200, 900);
+            isFullScreen=false;
+        }
+
     }
 }
 void startingPage()

@@ -20,6 +20,7 @@ void instruction()
     char right2[] = "Right ->right arrow";
     char info[] = "Both have limited fuel, have 3 life and can gain abilities while racing by earn them.";
     char infoLine[] = "____________________________________________________________________________________";
+    char fullscreen[] ="Press Shift+f for full screen";
 
     glColor3f(1.0,1.0,1.0);
 
@@ -39,6 +40,7 @@ void instruction()
     renderBitmapString(-0.5f, -0.5f, 0.0f, GLUT_BITMAP_TIMES_ROMAN_24, right2);
     renderBitmapString(-0.6f, -0.65f, 0.0f, GLUT_BITMAP_TIMES_ROMAN_24, info);
     renderBitmapString(-0.7f, -0.7f, 0.0f, GLUT_BITMAP_TIMES_ROMAN_24, infoLine);
+    renderBitmapString(-0.7f, -0.8f, 0.0f, GLUT_BITMAP_TIMES_ROMAN_24, fullscreen);
 
 
      car(0.8,1.0,0.0,0.0,1.0,'1');

@@ -2,18 +2,26 @@
 #include <GL/glut.h>
 #include <bits/stdc++.h>
 #include<cstdio>
+
 void roadBlock(double x, double y, double scale);
 bool firstTime=true;
 double choose;
 double choose2p1;
 double choose2p2;
 
+
 GLfloat obstacleSpeed = 0.05f;
 GLfloat obstaclePosX2;
 GLfloat obstaclePosX3;
 
-GLfloat obstaclePosY2=2.0f;
+GLfloat obstaclePosY2=2.5f;
 bool isMidFree=true;
+
+
+
+ GLfloat level1=0.5f;
+ GLfloat level2=1.0f;
+GLfloat level3;///Not necessary
 
 
 void updateObstacle(int value)
@@ -41,10 +49,9 @@ void updateObstacle(int value)
     }
     if(obstaclePosY2<-1.2f)
     {
-        obstaclePosY2=1.5f;
+        obstaclePosY2=2.5f;
 
     }
-
     obstaclePosY-=obstacleSpeed ;
     obstaclePosY2-=0.085f ;
     glutTimerFunc(100, updateObstacle,0);
@@ -55,7 +62,7 @@ void updateObstacle(int value)
 void generateObstacle()
 {
 
-    if(distanceOfCar<=.55)
+    if(distanceOfCar<=level1)
     {
         if(choose==1.0f)
         {
@@ -70,7 +77,7 @@ void generateObstacle()
             normal_car(-0.5f+obstaclePosX,obstaclePosY);
         }
     }
-    else if(distanceOfCar>.5&&distanceOfCar<1.3f)
+    else if(distanceOfCar>level1&&distanceOfCar<level2)
     {
 
         if(choose2p1==1.0f)
@@ -150,8 +157,11 @@ void generateObstacle()
             police_car(0.0f+obstaclePosX3,obstaclePosY);
         }
 
-
         roadBlock(0.0,obstaclePosY2,0.7);
+
+
+
+
 
 
     }

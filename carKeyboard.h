@@ -6,10 +6,15 @@
 using namespace std;
 // keyboard.h
 bool isCenterFree=true;
-
+bool isFullScreen=false;
 ///////////////////
 void displayGroupInfo();
 void display();
+void startDisplay();
+void keyboard(unsigned char key, int x, int y);
+void specialKeysStart(int key, int x, int y);
+void updateMovingCarInStart(int value);
+
 
 //////////////////
 GLfloat car1PosX = 0.0f;
@@ -81,6 +86,7 @@ void specialKeys(int key, int x, int y) {
             car2PosX += car2Speed;
         }
         break;
+
         /*
     case GLUT_KEY_UP:
         car2PosY += car2Speed;
@@ -114,6 +120,24 @@ void handleKeypress(unsigned char key, int x, int y)
             }
             car1PosX += car1Speed;
         }
+
+        break;
+        case 'F':
+        if(!isFullScreen)
+        {
+            glutFullScreen();
+            isFullScreen=true;
+        }
+        else
+        {
+            glutPositionWindow(100,100);
+            glutReshapeWindow(1200, 900);
+            isFullScreen=false;
+        }
+        break;
+
+        case 'X':
+
 
         break;
     /*case 'G':
