@@ -90,7 +90,13 @@ void leftScoreBoard(double x,double y)
         pos2+=0.05f; // Update the position here
 
     }
+        fuelStatus(0,0);
+    char c[]="Distance ";
+    char km[]="km";
 
+    renderBitmapString(-0.88,0.75,0.0,GLUT_BITMAP_TIMES_ROMAN_24,c);
+    renderBitmapString(-0.77,0.75,0.0,GLUT_BITMAP_TIMES_ROMAN_24,numString);
+    renderBitmapString(-0.70,0.75,0.0,GLUT_BITMAP_TIMES_ROMAN_24,km);
 
 }
 void updateDistance(int value)

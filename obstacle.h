@@ -18,10 +18,13 @@ GLfloat obstaclePosX3;
 
 GLfloat obstaclePosY2=2.5f;
 GLfloat obstaclePosY3=2.5f;
+
+GLfloat obstacleBlockY=2.5f;
+GLfloat obstacleBlockX=0.0f;
 bool isMidFree=true;
 
-GLfloat level1=.3f;
-GLfloat level2=7.0f;
+GLfloat level1=1.0f;
+GLfloat level2=3.0f;
 GLfloat level3;///Not necessary
 
 
@@ -37,7 +40,7 @@ void updateObstacle(int value)
         firstTime=false;
     }
 
-    if(obstaclePosY<-1.5f)
+    if(obstaclePosY<-0.35f)
     {
         obstaclePosY=2.0f;
         obstaclePosY2=2.0f;
@@ -51,12 +54,23 @@ void updateObstacle(int value)
         obstaclePosX3=printRandom(0.75f,0.25f,1.0f);
 
     }
+    if(distanceOfCar>level2&& obstacleBlockY<-1.0f)
+    {
+        obstacleBlockY=2.5f;
+    }
+
+    if(distanceOfCar>level2)
+    {
+        obstacleBlockY-=0.09f;
+    }
 
     obstaclePosY-=obstacleSpeed ;
+
     if(obstaclePosY2==obstaclePosY3)
     {
         obstaclePosY3-=obstacleSpeed;
         obstaclePosY2-=obstacleSpeed;
+
     }
     else
     {
@@ -68,6 +82,7 @@ void updateObstacle(int value)
         {
             obstaclePosY2-=obstacleSpeed;
         }
+
     }
 
     glutTimerFunc(100, updateObstacle,0);
@@ -132,35 +147,35 @@ void generateObstacle()
     {
         if(choose2p1==1.0f)
         {
-            police_car(obstaclePosX2,obstaclePosY);
+            police_car(obstaclePosX2,obstaclePosY2);
         }
         else if (choose2p1 ==2.0f)
         {
-            truck(obstaclePosX2,obstaclePosY);
+            truck(obstaclePosX2,obstaclePosY2-0.35f);
         }
-        else
+        else if(choose2p1 ==3.0f)
         {
-            truck(obstaclePosX2,obstaclePosY);
+            normal_car(obstaclePosX2,obstaclePosY2);
         }
 
 
 
-
-
-        if(choose2p2 == 3.0f)
+        if(choose2p2 == 4.0f)
         {
-            normal_car(0.0f+obstaclePosX3,obstaclePosY);
+            normal_car(obstaclePosX3,obstaclePosY3);
+
         }
-        else if(choose2p2== 4.0f)
+        else if(choose2p2== 5.0f)
         {
-            police_car(obstaclePosX3,obstaclePosY);
-        }
-        else
-        {
-            police_car(obstaclePosX3,obstaclePosY);
+            police_car(obstaclePosX3,obstaclePosY3);
+
         }
 
-        roadBlock(0.0,obstaclePosY2,0.7);
+        if(choose2p1!=3.0f)
+        {
+            roadBlock(obstacleBlockX,obstacleBlockY-.8,0.7);
+        }
+
 
 
     }

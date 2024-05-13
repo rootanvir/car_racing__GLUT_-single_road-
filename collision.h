@@ -33,7 +33,7 @@ void updateCollision(int value)
         }
 
     }
-    else if(distanceOfCar>level1&&distanceOfCar<=level2)
+    else //if(distanceOfCar>level1&&distanceOfCar<=level2)
     {
         //cout<<"level 2"<<endl;
         if((car1PosX==obstaclePosX2-0.25f)&&(obstaclePosY2<0.4f ))
@@ -47,10 +47,21 @@ void updateCollision(int value)
             heartCount2-=1;
             obstaclePosY3=2.0f;
         }
+        if((car1PosX==obstacleBlockX+0.25f)&&(obstacleBlockY<0.4f ))
+        {
+            heartCount1-=1;
+            obstacleBlockY=3.0f;
+        }
+
+        if((car2PosX==obstacleBlockX-0.25f)&&(obstacleBlockY<0.4f ))
+        {
+            heartCount2-=1;
+            obstacleBlockY=3.0f;
+        }
 
     }
 
-    cout<<obstaclePosX2<<"\t"<<obstaclePosX3<<endl;
+
     //cout<<car1PosX<<"\t"<<obstaclePosX2-0.25f<<"\t"<<obstaclePosY2<<endl;
     //cout<<car2PosX<<"\t"<<obstaclePosX3-0.75f<<"\t"<<obstaclePosY3<<endl;
 
