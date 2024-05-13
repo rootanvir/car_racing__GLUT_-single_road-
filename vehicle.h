@@ -337,75 +337,75 @@ void truck(double x,double y)
 
     glColor3f(0.659, 0.506, 0.09); // Maroon color
     glBegin(GL_POLYGON);
-    glVertex2f(-0.05f+x, 0.01f+y);
-    glVertex2f(-0.05f+x, -0.04f+y);
-    glVertex2f(0.04f+x, -0.05f+y);
-    glVertex2f(0.04f+x, 0.02f+y);
+    glVertex2f(-0.05f-0.5+x, 0.01f+y);
+    glVertex2f(-0.05f-0.5+x, -0.04f+y);
+    glVertex2f(0.04f-0.5+x, -0.05f+y);
+    glVertex2f(0.04f-0.5+x, 0.02f+y);
     glEnd();
 
     glColor3f(0.984, 0.804, 0.318);
     glBegin(GL_POLYGON);
-    glVertex2f(-0.08f+x, -0.01f+y);
-    glVertex2f(0.06f+x, -0.01f+y);
+    glVertex2f(-0.08f-0.5+x, -0.01f+y);
+    glVertex2f(0.06f-0.5+x, -0.01f+y);
     glColor3f(0.761, 0.561, 0.012);
-    glVertex2f(0.06f+x, 0.15f+y);
-    glVertex2f(0.04f+x, 0.17f+y);
-    glVertex2f(-0.06f+x, 0.17f+y);
-    glVertex2f(-0.08f+x, 0.15f+y);
+    glVertex2f(0.06f-0.5+x, 0.15f+y);
+    glVertex2f(0.04f-0.5+x, 0.17f+y);
+    glVertex2f(-0.06f-0.5+x, 0.17f+y);
+    glVertex2f(-0.08f-0.5+x, 0.15f+y);
     glEnd();
 
     glColor3f(0.933, 0.941, 0.937);
     glBegin(GL_POLYGON);
-    glVertex2f(-0.08f+x, -0.51f+y);
+    glVertex2f(-0.08f-0.5+x, -0.51f+y);
     glColor3f(0.322, 0.322, 0.322);
-    glVertex2f(0.06f+x, -0.51f+y);
-    glVertex2f(0.06f+x, -0.02f+y);
-    glVertex2f(-0.08f+x, -0.02f+y);
+    glVertex2f(0.06f-0.5+x, -0.51f+y);
+    glVertex2f(0.06f-0.5+x, -0.02f+y);
+    glVertex2f(-0.08f-0.5+x, -0.02f+y);
     glEnd();
 
 
     glColor3f(0.0f, 0.0f, 0.0f);
     glBegin(GL_POLYGON);
-    glVertex2f(-0.07f+x, 0.01f+y);
-    glVertex2f(-0.06f+x, 0.01f+y);
-    glVertex2f(-0.06f+x, 0.08f+y);
+    glVertex2f(-0.07f-0.5+x, 0.01f+y);
+    glVertex2f(-0.06f-0.5+x, 0.01f+y);
+    glVertex2f(-0.06f-0.5+x, 0.08f+y);
     glColor3f(0.812, 0.812, 0.812);
-    glVertex2f(-0.07f+x, 0.09f+y);
+    glVertex2f(-0.07f-0.5+x, 0.09f+y);
     glEnd();
 
     glColor3f(0.0f, 0.0f, 0.0f);
     glBegin(GL_POLYGON);
-    glVertex2f(0.04f+x, 0.01f+y);
+    glVertex2f(0.04f-0.5+x, 0.01f+y);
     glColor3f(0.812, 0.812, 0.812);
-    glVertex2f(0.05f+x, 0.01f+y);
-    glVertex2f(0.05f+x, 0.09f+y);
-    glVertex2f(0.04f+x, 0.07f+y);
+    glVertex2f(0.05f-0.5+x, 0.01f+y);
+    glVertex2f(0.05f-0.5+x, 0.09f+y);
+    glVertex2f(0.04f-0.5+x, 0.07f+y);
     glEnd();
 
 
     glColor3f(0.0f, 0.0f, 0.0f);
     glBegin(GL_POLYGON);
-    glVertex2f(-0.06f+x, 0.14f+y);
-    glVertex2f(0.04f+x, 0.14f+y);
-    glVertex2f(0.03f+x, 0.11f+y);
+    glVertex2f(-0.06f-0.5+x, 0.14f+y);
+    glVertex2f(0.04f-0.5+x, 0.14f+y);
+    glVertex2f(0.03f-0.5+x, 0.11f+y);
     glColor3f(0.812, 0.812, 0.812);
-    glVertex2f(-0.05f+x, 0.11f+y);
+    glVertex2f(-0.05f-0.5+x, 0.11f+y);
     glEnd();
 
 
     glLineWidth(5);
     glColor3f(1.0f, 1.0f, 1.0f);
     glBegin(GL_LINE_STRIP);
-    glVertex2f(-0.06f+x, 0.16f+y);
-    glVertex2f(-0.04f+x, 0.16f+y);
+    glVertex2f(-0.06f-0.5+x, 0.16f+y);
+    glVertex2f(-0.04f-0.5+x, 0.16f+y);
     glEnd();
 
 
     glLineWidth(5);
     glColor3f(1.0f, 1.0f, 1.0f);
     glBegin(GL_LINE_STRIP);
-    glVertex2f(0.02f+x, 0.16f+y);
-    glVertex2f(0.04f+x, 0.16f+y);
+    glVertex2f(0.02f-0.5+x, 0.16f+y);
+    glVertex2f(0.04f-0.5+x, 0.16f+y);
     glEnd();
 
 

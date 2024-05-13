@@ -2,6 +2,7 @@
 #include <windows.h> // for MS Windows
 #include <GL/glut.h> // GLUT, include glu.h and gl.h
 #include <cstdio>
+#include <GL/freeglut.h>
 #include "road.h"
 #include "tree.h"
 #include "lake.h"
@@ -19,12 +20,16 @@
 #include "sound.h"
 #include "obstacle.h"
 #include "instructions.h"
-
+#include "windowIcon.h"
+#include "collision.h"
 
 using namespace std;
 
 int screen_width = glutGet(GLUT_SCREEN_WIDTH);
 int screen_height = glutGet(GLUT_SCREEN_HEIGHT);
+const char iconPath[]="icon.ico";
+
+
 
 
 void display()
@@ -39,6 +44,8 @@ void display()
     generateObstacle();
     car1();
     car2();
+//truck(0.0,0.0);police_car(0.0,0.0);normal_car(0.0,0.0);
+
 
     scoreBoard();
     glFlush();
@@ -63,15 +70,19 @@ int main(int argc, char** argv)
     Sleep(1000);
     cout<<"glut initialized"<<endl;
     Sleep(200);
+
     glutInitWindowSize(1200, 900); // Set the window's initial width & height
     glutInitWindowPosition(100, 100);  // Set the window's initial position according to the monitor
+    cout<<"Creating new window..."<<endl;
+    Sleep(600);
     glutCreateWindow("Car Racing"); // Create a window with the given title
-    // Register display callback handler for window re-paint
+
+    //setWindowIcon(iconPath);
     glClearColor(1.0, 1.0, 1.0, 1.0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     gluOrtho2D(-1.0, 1.0, -1.0, 1.0);
-    glutSetIconTitle("icon.ico");
+    //glutSetIconTitle(iconPath);
 
     if(true)
     {
@@ -102,7 +113,7 @@ int main(int argc, char** argv)
         //isInStart=false;
     }
     Sleep(200);
-    cout<<"display initialized"<<endl;
+    cout<<"Display Launched"<<endl;
     glutMainLoop();
 
 

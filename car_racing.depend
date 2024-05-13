@@ -327,11 +327,12 @@
 	<GL/gl.h>
 	<GL/glut.h>
 
-1715444081 source:d:\cg project\car_racing__glut_-single_road-\main.cpp
+1715569669 source:d:\cg project\car_racing__glut_-single_road-\main.cpp
 	<bits/stdc++.h>
 	<windows.h>
 	<GL/glut.h>
 	<cstdio>
+	<GL/freeglut.h>
 	"road.h"
 	"tree.h"
 	"lake.h"
@@ -349,6 +350,8 @@
 	"sound.h"
 	"obstacle.h"
 	"instructions.h"
+	"windowIcon.h"
+	"collision.h"
 
 1714424145 d:\cg project\car_racing__glut_-single_road-\road.h
 	<windows.h>
@@ -374,7 +377,7 @@
 	<windows.h>
 	<GL/glut.h>
 
-1714679614 d:\cg project\car_racing__glut_-single_road-\animation.h
+1715535424 d:\cg project\car_racing__glut_-single_road-\animation.h
 	<windows.h>
 	<GL/glut.h>
 	<cstdio>
@@ -385,7 +388,7 @@
 	<bits/stdc++.h>
 	<GL/glut.h>
 
-1715444705 d:\cg project\car_racing__glut_-single_road-\carkeyboard.h
+1715444738 d:\cg project\car_racing__glut_-single_road-\carkeyboard.h
 	<cstdio>
 	<bits/stdc++.h>
 	<GL/gl.h>
@@ -395,7 +398,7 @@
 	<bits/stdc++.h>
 	<GL/glut.h>
 
-1714754976 d:\cg project\car_racing__glut_-single_road-\scoreboard.h
+1715534910 d:\cg project\car_racing__glut_-single_road-\scoreboard.h
 	<windows.h>
 	<GL/glut.h>
 	<bits/stdc++.h>
@@ -410,7 +413,7 @@
 	<GL/glut.h>
 	<random>
 
-1715443870 d:\cg project\car_racing__glut_-single_road-\startingpage.h
+1715532235 d:\cg project\car_racing__glut_-single_road-\startingpage.h
 	<bits/stdc++.h>
 	<GL/glut.h>
 	<bits/stdc++.h>
@@ -421,17 +424,32 @@
 	<bits/stdc++.h>
 	<cstdio>
 
-1715443763 d:\cg project\car_racing__glut_-single_road-\obstacle.h
+1715569943 d:\cg project\car_racing__glut_-single_road-\obstacle.h
 	<windows.h>
 	<GL/glut.h>
 	<bits/stdc++.h>
 	<cstdio>
 
-1715250789 d:\cg project\car_racing__glut_-single_road-\vehicle.h
+1715568917 d:\cg project\car_racing__glut_-single_road-\vehicle.h
 	<windows.h>
 	<GL/glut.h>
 
 1715444005 d:\cg project\car_racing__glut_-single_road-\instructions.h
 
 1715368472 d:\cg project\car_racing__glut_-single_road-\valuesetter.h
+
+1632060791 c:\program files (x86)\codeblocks\mingw\include\gl\freeglut.h
+	"freeglut_std.h"
+	"freeglut_ext.h"
+
+1632060794 c:\program files (x86)\codeblocks\mingw\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1715447849 d:\cg project\car_racing__glut_-single_road-\windowicon.h
+
+1715567783 d:\cg project\car_racing__glut_-single_road-\collision.h
+	<cstdio>
+	<bits/stdc++.h>
+	<GL/gl.h>
+	<GL/glut.h>
 

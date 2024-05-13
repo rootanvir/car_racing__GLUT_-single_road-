@@ -17,11 +17,11 @@ GLfloat obstaclePosX3;
 GLfloat obstaclePosY2=2.5f;
 bool isMidFree=true;
 
-
-
- GLfloat level1=0.5f;
- GLfloat level2=1.0f;
+GLfloat level1=1.0f;
+GLfloat level2=5.0f;
 GLfloat level3;///Not necessary
+
+
 
 
 void updateObstacle(int value)
@@ -66,15 +66,15 @@ void generateObstacle()
     {
         if(choose==1.0f)
         {
-            police_car(0.03f+obstaclePosX,obstaclePosY);
+            police_car(obstaclePosX,obstaclePosY);
         }
         else if (choose ==2.0f)
         {
-            truck(-0.5+obstaclePosX,obstaclePosY);
+            truck(obstaclePosX,obstaclePosY);
         }
         else if(choose == 3.0f)
         {
-            normal_car(-0.5f+obstaclePosX,obstaclePosY);
+            normal_car(obstaclePosX,obstaclePosY);
         }
     }
     else if(distanceOfCar>level1&&distanceOfCar<level2)
@@ -82,11 +82,11 @@ void generateObstacle()
 
         if(choose2p1==1.0f)
         {
-            police_car(0.03f+obstaclePosX2,obstaclePosY);
+            police_car(obstaclePosX2,obstaclePosY);
         }
         else if (choose2p1 ==2.0f)
         {
-            truck(-0.5+obstaclePosX2,obstaclePosY);
+            truck(obstaclePosX2,obstaclePosY);
         }
         else
         {
@@ -99,12 +99,12 @@ void generateObstacle()
 
         if(choose2p2 == 3.0f)
         {
-            normal_car(0.0f+obstaclePosX3,obstaclePosY);
+            normal_car(obstaclePosX3,obstaclePosY);
 
         }
         else if(choose2p2== 4.0f)
         {
-             police_car(0.0f+obstaclePosX3,obstaclePosY);
+             police_car(obstaclePosX3,obstaclePosY);
 
         }
         else
@@ -129,15 +129,15 @@ void generateObstacle()
     {
         if(choose2p1==1.0f)
         {
-            police_car(0.03f+obstaclePosX2,obstaclePosY);
+            police_car(obstaclePosX2,obstaclePosY);
         }
         else if (choose2p1 ==2.0f)
         {
-            truck(-0.5+obstaclePosX2,obstaclePosY);
+            truck(obstaclePosX2,obstaclePosY);
         }
         else
         {
-            truck(-0.5+obstaclePosX2,obstaclePosY);
+            truck(obstaclePosX2,obstaclePosY);
         }
 
 
@@ -150,18 +150,14 @@ void generateObstacle()
         }
         else if(choose2p2== 4.0f)
         {
-             police_car(0.0f+obstaclePosX3,obstaclePosY);
+             police_car(obstaclePosX3,obstaclePosY);
         }
         else
         {
-            police_car(0.0f+obstaclePosX3,obstaclePosY);
+            police_car(obstaclePosX3,obstaclePosY);
         }
 
         roadBlock(0.0,obstaclePosY2,0.7);
-
-
-
-
 
 
     }

@@ -19,7 +19,8 @@ double distanceOfCar=0.0f;
 double displacement =0.02f;
 char numString[10];
 
-int heartCount=3;
+int heartCount1=3;
+int heartCount2=3;
 
 
 void BoardLeft()
@@ -47,19 +48,23 @@ void rightScoreBoard()
     BoardLeft();
     iconFuel(0.0,0.0);
     thunder(0.0,0.0);
-    double pos=0.0f; // Move the declaration outside of the loop
-    if(heartCount>3)
+    double pos1=0.0f; // Move the declaration outside of the loop
+    if(heartCount1>3)
     {
-        heartCount=3;
+        heartCount1=3;
+    }
+    if(heartCount2>3)
+    {
+        heartCount2=3;
     }
 
-
-    for(int i=0; i<heartCount; i++)
+    for(int i=0; i<heartCount1; i++)
     {
-        heart(pos,0.0f);
-        pos+=0.05f; // Update the position here
+        heart(pos1,0.0f);
+        pos1+=0.05f; // Update the position here
 
     }
+
 
 
     fuelStatus(0,0);
@@ -76,8 +81,15 @@ void leftScoreBoard(double x,double y)
     BoardRight();
     iconFuel(x,y);
     thunder(x,y);
-    heart(x,y);
+
     fuelStatus(x,y);
+    double pos2=-1.65f;
+    for(int i=0; i<heartCount2; i++)
+    {
+        heart(pos2,0.0f);
+        pos2+=0.05f; // Update the position here
+
+    }
 
 
 }
@@ -96,10 +108,7 @@ void updateDistance(int value)
 void scoreBoardUpdate(int value)
 {
 //cout<<obstaclePosY<<" "<<heartCount<<""<<(obstaclePosY<0.0f)<<endl;
-    if(obstaclePosY==-1.45f)
-    {
-        heartCount--;
-    }
+
 
     glutPostRedisplay();
     glutTimerFunc(300, scoreBoardUpdate, 0);

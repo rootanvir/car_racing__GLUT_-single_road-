@@ -52,6 +52,7 @@
 		<Unit filename="road.h" />
 		<Unit filename="scoreBoard.h" />
 		<Unit filename="sound.h" />
+		<Unit filename="windowIcon.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -9,6 +9,7 @@ void carEngineStart();
 void enterSound();
 void updateObstacle(int value);
 void displayInstruction();
+void updateCollision(int value);
 
 bool isGroupOpen=false;
 
@@ -202,6 +203,7 @@ void keyboard(unsigned char key, int x, int y)
             glutTimerFunc(100, updateCarControl1, 0);
             glutTimerFunc(100, updateCarControl2, 0);
             glutTimerFunc(100,scoreBoardUpdate, 0);
+            glutTimerFunc(100,updateCollision, 0);
             glutSpecialFunc(specialKeys);
             glutKeyboardFunc(handleKeypress);
 
