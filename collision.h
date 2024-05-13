@@ -23,7 +23,11 @@ if(distanceOfCar>0.22f)
 
             heartCount1-=1;
             obstaclePosY=2.0f;
-            carCrashSound();
+            if(PLAY)
+            {
+                carCrashSound();
+            }
+
 
 
         }
@@ -32,7 +36,11 @@ if(distanceOfCar>0.22f)
         {
             heartCount2-=1;
             obstaclePosY=2.0f;
-            carCrashSound();
+            if(PLAY)
+            {
+              carCrashSound();
+            }
+
         }
 
     }
@@ -43,27 +51,43 @@ if(distanceOfCar>0.22f)
         {
             heartCount1-=1;
             obstaclePosY2=2.0f;
-            carCrashSound();
+            if(PLAY)
+            {
+                carCrashSound();
+            }
+
         }
 
         if((car2PosX==obstaclePosX3-0.75f)&&(obstaclePosY3<0.4f ))
         {
             heartCount2-=1;
             obstaclePosY3=2.0f;
-            carCrashSound();
+            if(PLAY)
+            {
+                carCrashSound();
+            }
+
         }
         if((car1PosX==obstacleBlockX+0.25f)&&(obstacleBlockY<0.4f ))
         {
             heartCount1-=1;
             obstacleBlockY=3.0f;
-            carCrashSound();
+            if(PLAY)
+            {
+                carCrashSound();
+            }
+
         }
 
         if((car2PosX==obstacleBlockX-0.25f)&&(obstacleBlockY<0.4f ))
         {
             heartCount2-=1;
             obstacleBlockY=3.0f;
-            carCrashSound();
+            if(PLAY)
+            {
+                carCrashSound();
+            }
+
         }
 
     }

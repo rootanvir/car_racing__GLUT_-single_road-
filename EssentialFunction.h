@@ -33,9 +33,11 @@ double printRandom(double start, double step, double end) {
 
 
 
-
-
-
+char* doubleToCharArray(double value) {
+    char* buffer = (char*)malloc(20 * sizeof(char));
+    snprintf(buffer, 20, "%.2lf", value); // Format the double to string with two decimal places
+    return buffer;
+}
 /*
 double printRandom() {
     // Create a random device

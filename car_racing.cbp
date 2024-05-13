@@ -49,6 +49,7 @@
 		<Unit filename="lampost.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="obstacle.h" />
+		<Unit filename="result.h" />
 		<Unit filename="road.h" />
 		<Unit filename="scoreBoard.h" />
 		<Unit filename="sound.h" />

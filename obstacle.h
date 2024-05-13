@@ -23,8 +23,8 @@ GLfloat obstacleBlockY=2.5f;
 GLfloat obstacleBlockX=0.0f;
 bool isMidFree=true;
 
-GLfloat level1=1.0f;
-GLfloat level2=3.0f;
+GLfloat level1=3.0f;
+GLfloat level2=6.0f;
 GLfloat level3;///Not necessary
 
 
@@ -104,7 +104,7 @@ void generateObstacle()
         }
         else if (choose ==2.0f)
         {
-            truck(obstaclePosX,obstaclePosY-0.35f);
+            truck(obstaclePosX,(obstaclePosY-0.35f));
 
         }
         else if(choose == 3.0f)

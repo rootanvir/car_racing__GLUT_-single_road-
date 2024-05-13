@@ -20,8 +20,8 @@
 #include "sound.h"
 #include "obstacle.h"
 #include "instructions.h"
-#include "windowIcon.h"
 #include "collision.h"
+#include "result.h"
 
 using namespace std;
 
@@ -45,7 +45,6 @@ void display()
     car1();
     car2();
     scoreBoard();
-
     glFlush();
 }
 

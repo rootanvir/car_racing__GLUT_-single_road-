@@ -12,6 +12,8 @@ void displayInstruction();
 void updateCollision(int value);
 void racingCarSound();
 bool isGroupOpen=false;
+void resultChecker(int value);
+void resultDisplay();
 
 GLfloat carPosStart = -1.0f;
 GLfloat speedInStart = 0.1f;
@@ -126,9 +128,9 @@ void background(double x,double y)
 void selector(double x,double y)
 {
     glBegin(GL_POLYGON);
-    glColor3f(1.0f,0.0f,0.0f);
+    glColor3f(0.0f,0.0f,0.0f);
     glVertex2f(-0.2f+x, 0.4f+y+selectPos);
-    glColor3f(.0f,.0f,.0f);
+//   glColor3f(.0f,.0f,.0f);
     glVertex2f(0.2f+x, 0.4f+y+selectPos);
 
     glVertex2f(0.2f+x, 0.25f+y+selectPos);
@@ -163,13 +165,13 @@ void specialKeysStart(int key, int x, int y)
     break;
     */
 
-/*
-    case GLUT_KEY_UP:
-        menu1Sound();
-    selectPos += 0.2f; // Increase selectPos first
-        if(selectPos>0.0f)
-            selectPos=-0.6f;
-        break;*/
+    /*
+        case GLUT_KEY_UP:
+            menu1Sound();
+        selectPos += 0.2f; // Increase selectPos first
+            if(selectPos>0.0f)
+                selectPos=-0.6f;
+            break;*/
     case GLUT_KEY_DOWN:
         menu2Sound();
         selectPos -= selectPosChangeRate;
@@ -184,6 +186,7 @@ void specialKeysStart(int key, int x, int y)
     //cout<<selectPos<<endl;
     glutPostRedisplay();
 }
+
 void keyboard(unsigned char key, int x, int y)
 {
 
@@ -192,7 +195,6 @@ void keyboard(unsigned char key, int x, int y)
         enterSound();
         if(selectPos==0.0f)
         {
-
             glutDisplayFunc(display);
             glutTimerFunc(100, update, 0);
             glutTimerFunc(100, update2, 0);
@@ -205,8 +207,11 @@ void keyboard(unsigned char key, int x, int y)
             glutTimerFunc(100, updateCarControl2, 0);
             glutTimerFunc(100,scoreBoardUpdate, 0);
             glutTimerFunc(100,updateCollision, 0);
+            glutTimerFunc(100,resultChecker, 0);
             glutSpecialFunc(specialKeys);
             glutKeyboardFunc(handleKeypress);
+
+
 
         }
         if(selectPos==-0.2f)

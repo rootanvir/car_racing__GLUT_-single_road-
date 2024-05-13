@@ -7,6 +7,7 @@ using namespace std;
 // keyboard.h
 bool isCenterFree=true;
 bool isFullScreen=false;
+bool PLAY=true;
 ///////////////////
 void displayGroupInfo();
 void display();
@@ -76,7 +77,11 @@ void specialKeys(int key, int x, int y) {
             {
                 break;
             }
-            slidingSound();
+            if(PLAY)
+            {
+                slidingSound();
+            }
+
             car2PosX -= car2Speed;
         }
         break;
@@ -85,7 +90,11 @@ void specialKeys(int key, int x, int y) {
         if(car2PosX< 0.25)
         {
             car2PosX += car2Speed;
-            slidingSound();
+            if(PLAY)
+            {
+                slidingSound();
+            }
+
         }
         break;
 
@@ -110,7 +119,11 @@ void handleKeypress(unsigned char key, int x, int y)
         if(car1PosX > -0.25)
         {
             car1PosX -= car1Speed;
-            slidingSound();
+            if(PLAY)
+            {
+                slidingSound();
+            }
+
         }
 
         break;
@@ -122,7 +135,11 @@ void handleKeypress(unsigned char key, int x, int y)
                 break;
             }
             car1PosX += car1Speed;
-            slidingSound();
+            if(PLAY)
+            {
+                slidingSound();
+            }
+
         }
 
         break;
@@ -141,8 +158,7 @@ void handleKeypress(unsigned char key, int x, int y)
         break;
 
         case 'X':
-
-
+            exit(0);
         break;
     /*case 'G':
         cout<<"G"<<endl;
