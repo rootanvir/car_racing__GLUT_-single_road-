@@ -327,7 +327,7 @@
 	<GL/gl.h>
 	<GL/glut.h>
 
-1715569669 source:d:\cg project\car_racing__glut_-single_road-\main.cpp
+1715596790 source:d:\cg project\car_racing__glut_-single_road-\main.cpp
 	<bits/stdc++.h>
 	<windows.h>
 	<GL/glut.h>
@@ -398,7 +398,7 @@
 	<bits/stdc++.h>
 	<GL/glut.h>
 
-1715534910 d:\cg project\car_racing__glut_-single_road-\scoreboard.h
+1715593548 d:\cg project\car_racing__glut_-single_road-\scoreboard.h
 	<windows.h>
 	<GL/glut.h>
 	<bits/stdc++.h>
@@ -413,7 +413,7 @@
 	<GL/glut.h>
 	<random>
 
-1715532235 d:\cg project\car_racing__glut_-single_road-\startingpage.h
+1715600156 d:\cg project\car_racing__glut_-single_road-\startingpage.h
 	<bits/stdc++.h>
 	<GL/glut.h>
 	<bits/stdc++.h>
@@ -424,7 +424,7 @@
 	<bits/stdc++.h>
 	<cstdio>
 
-1715569943 d:\cg project\car_racing__glut_-single_road-\obstacle.h
+1715603977 d:\cg project\car_racing__glut_-single_road-\obstacle.h
 	<windows.h>
 	<GL/glut.h>
 	<bits/stdc++.h>
@@ -447,7 +447,7 @@
 
 1715447849 d:\cg project\car_racing__glut_-single_road-\windowicon.h
 
-1715567783 d:\cg project\car_racing__glut_-single_road-\collision.h
+1715602939 d:\cg project\car_racing__glut_-single_road-\collision.h
 	<cstdio>
 	<bits/stdc++.h>
 	<GL/gl.h>

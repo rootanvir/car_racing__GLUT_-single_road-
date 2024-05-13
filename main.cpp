@@ -71,8 +71,8 @@ int main(int argc, char** argv)
     cout<<"glut initialized"<<endl;
     Sleep(200);
 
-    glutInitWindowSize(1200, 900); // Set the window's initial width & height
-    glutInitWindowPosition(100, 100);  // Set the window's initial position according to the monitor
+    glutInitWindowSize(800, 600); // Set the window's initial width & height
+    glutInitWindowPosition(500, 100);  // Set the window's initial position according to the monitor
     cout<<"Creating new window..."<<endl;
     Sleep(600);
     glutCreateWindow("Car Racing"); // Create a window with the given title

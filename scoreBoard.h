@@ -58,7 +58,7 @@ void rightScoreBoard()
         heartCount2=3;
     }
 
-    for(int i=0; i<heartCount1; i++)
+    for(int i=0; i<heartCount2; i++)
     {
         heart(pos1,0.0f);
         pos1+=0.05f; // Update the position here
@@ -84,7 +84,7 @@ void leftScoreBoard(double x,double y)
 
     fuelStatus(x,y);
     double pos2=-1.65f;
-    for(int i=0; i<heartCount2; i++)
+    for(int i=0; i<heartCount1; i++)
     {
         heart(pos2,0.0f);
         pos2+=0.05f; // Update the position here
