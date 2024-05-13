@@ -44,10 +44,8 @@ void display()
     generateObstacle();
     car1();
     car2();
-//truck(0.0,0.0);police_car(0.0,0.0);normal_car(0.0,0.0);
-
-
     scoreBoard();
+
     glFlush();
 }
 

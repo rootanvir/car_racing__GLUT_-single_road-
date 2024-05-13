@@ -5,6 +5,11 @@ void renderBitmapString(float x, float y, float z, void* font,  char* string);
 bool isRed=true;
 bool isBlue=true;
 
+
+void truckSound();
+
+
+
 void car(double x,double y,double R,double G,double B,char ch)
 {
     //glPushMatrix();
@@ -159,6 +164,7 @@ void car(double x,double y,double R,double G,double B,char ch)
         char ch1[]="02";
         renderBitmapString(-0.525f+x, -0.75f+y,0.0f, GLUT_BITMAP_TIMES_ROMAN_24, ch1);
     }
+
 
 
 }
@@ -334,6 +340,7 @@ void police_car(double x,double y)
 
 void truck(double x,double y)
 {
+    //truckSound();
 
     glColor3f(0.659, 0.506, 0.09); // Maroon color
     glBegin(GL_POLYGON);

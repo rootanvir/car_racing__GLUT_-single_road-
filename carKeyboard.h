@@ -14,7 +14,7 @@ void startDisplay();
 void keyboard(unsigned char key, int x, int y);
 void specialKeysStart(int key, int x, int y);
 void updateMovingCarInStart(int value);
-
+void slidingSound();
 
 //////////////////
 GLfloat car1PosX = 0.0f;
@@ -76,6 +76,7 @@ void specialKeys(int key, int x, int y) {
             {
                 break;
             }
+            slidingSound();
             car2PosX -= car2Speed;
         }
         break;
@@ -84,6 +85,7 @@ void specialKeys(int key, int x, int y) {
         if(car2PosX< 0.25)
         {
             car2PosX += car2Speed;
+            slidingSound();
         }
         break;
 
@@ -108,6 +110,7 @@ void handleKeypress(unsigned char key, int x, int y)
         if(car1PosX > -0.25)
         {
             car1PosX -= car1Speed;
+            slidingSound();
         }
 
         break;
@@ -119,6 +122,7 @@ void handleKeypress(unsigned char key, int x, int y)
                 break;
             }
             car1PosX += car1Speed;
+            slidingSound();
         }
 
         break;

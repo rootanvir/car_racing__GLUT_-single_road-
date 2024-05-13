@@ -100,14 +100,17 @@ void generateObstacle()
         if(choose==1.0f)
         {
             police_car(obstaclePosX,obstaclePosY);
+
         }
         else if (choose ==2.0f)
         {
             truck(obstaclePosX,obstaclePosY-0.35f);
+
         }
         else if(choose == 3.0f)
         {
             normal_car(obstaclePosX,obstaclePosY);
+
         }
     }
     else if(distanceOfCar>level1&&distanceOfCar<level2)
@@ -116,14 +119,17 @@ void generateObstacle()
         if(choose2p1==1.0f)
         {
             police_car(obstaclePosX2,obstaclePosY2);
+
         }
         else if (choose2p1 ==2.0f)
         {
             truck(obstaclePosX2,obstaclePosY2-0.35f);
+
         }
         else if(choose2p1 ==3.0f)
         {
             normal_car(obstaclePosX2,obstaclePosY2);
+
         }
 
 
@@ -132,10 +138,12 @@ void generateObstacle()
         {
             normal_car(obstaclePosX3,obstaclePosY3);
 
+
         }
         else if(choose2p2== 5.0f)
         {
             police_car(obstaclePosX3,obstaclePosY3);
+
 
         }
 

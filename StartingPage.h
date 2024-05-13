@@ -10,7 +10,7 @@ void enterSound();
 void updateObstacle(int value);
 void displayInstruction();
 void updateCollision(int value);
-
+void racingCarSound();
 bool isGroupOpen=false;
 
 GLfloat carPosStart = -1.0f;
@@ -192,6 +192,7 @@ void keyboard(unsigned char key, int x, int y)
         enterSound();
         if(selectPos==0.0f)
         {
+
             glutDisplayFunc(display);
             glutTimerFunc(100, update, 0);
             glutTimerFunc(100, update2, 0);

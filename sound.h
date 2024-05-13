@@ -19,6 +19,33 @@ void enterSound()
         PlaySound("resources/menu_sound/enter.wav", NULL,SND_ASYNC|SND_FILENAME);
 }
 
+void normalCarSound()
+{
+        PlaySound("resources/car/normalCar.wav", NULL,SND_ASYNC|SND_FILENAME);
+}
+void racingCarSound()
+{
+        PlaySound("resources/car/racingCar.wav", NULL,SND_ASYNC|SND_FILENAME | SND_LOOP);
+}
+void policeCarSound()
+{
+        PlaySound("resources/car/policeCar.wav", NULL,SND_ASYNC|SND_FILENAME);
+}
+void truckSound()
+{
+        PlaySound("resources/car/truck.wav", NULL,SND_ASYNC|SND_FILENAME);
+}
+
+void slidingSound()
+{
+        PlaySound("resources/car/sliding.wav", NULL,SND_ASYNC|SND_FILENAME);
+}
+void carCrashSound()
+{
+        PlaySound("resources/car/carCrash.wav", NULL,SND_ASYNC|SND_FILENAME );
+}
+
+
 
 
 void initMenuSound()
